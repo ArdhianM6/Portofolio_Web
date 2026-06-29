@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Daftar skill dan teknologi yang dikuasai Ardhian, mulai dari HTML, CSS, JavaScript, hingga React.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Skills - Ardhian</title>
+
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Ardhian</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="project.html">Project</a>
+            <a href="experience.html">Experience</a>
+            <a href="certificate.html">Certificates</a>
+        </nav>
+    </header>
+
+    <section class="skills-section">
+
+        <!-- HERO HEADING -->
+        <div class="skills-heading" data-animate>
+            <span class="skl-eyebrow"><i class="fa-solid fa-code"></i> Tech Stack</span>
+            <h1>Skills</h1>
+            <p>Berikut beberapa skill pemrograman yang saya miliki berdasarkan project yang pernah saya kerjakan.</p>
+        </div>
+
+        <!-- STATS BAR -->
+        <div class="skl-stats" data-animate>
+            <div class="skl-stat">
+                <span class="skl-stat-num">6</span>
+                <span class="skl-stat-lbl">Total Skill</span>
+            </div>
+            <div class="skl-stat-divider"></div>
+            <div class="skl-stat">
+                <span class="skl-stat-num">3</span>
+                <span class="skl-stat-lbl">Kategori</span>
+            </div>
+            <div class="skl-stat-divider"></div>
+            <div class="skl-stat">
+                <span class="skl-stat-num">75%</span>
+                <span class="skl-stat-lbl">Rata-rata Level</span>
+            </div>
+        </div>
+
+        <!-- FILTER TABS -->
+        <div class="skl-tabs" data-animate>
+            <button class="skl-tab-btn active" data-filter="all">
+                <i class="fa-solid fa-layer-group"></i> Semua
+            </button>
+            <button class="skl-tab-btn" data-filter="frontend">
+                <i class="fa-solid fa-laptop-code"></i> Frontend
+            </button>
+            <button class="skl-tab-btn" data-filter="backend">
+                <i class="fa-solid fa-server"></i> Backend
+            </button>
+            <button class="skl-tab-btn" data-filter="database">
+                <i class="fa-solid fa-database"></i> Database
+            </button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-container" id="skillsGrid">
+
+            <div class="skill" data-tilt data-animate data-category="frontend">
+                <i class="fab fa-html5"></i>
+                <h3>HTML / CSS</h3>
+                <span class="skill-level advanced">Advanced</span>
+                <span class="progress-percent">90%</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="90%"></div>
+                </div>
+                <p>Pengalaman mendesain website menggunakan HTML dan CSS.</p>
+            </div>
+
+            <div class="skill" data-tilt data-animate data-category="frontend">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <span class="skill-level proficient">Proficient</span>
+                <span class="progress-percent">70%</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="70%"></div>
+                </div>
+                <p>Mampu membangun aplikasi web yang interaktif dan dinamis.</p>
+            </div>
+
+            <div class="skill" data-tilt data-animate data-category="frontend">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <span class="skill-level proficient">Proficient</span>
+                <span class="progress-percent">69%</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="69%"></div>
+                </div>
+                <p>Terampil dalam membangun aplikasi front-end yang dapat diskalakan.</p>
+            </div>
+
+            <div class="skill" data-tilt data-animate data-category="backend">
+                <i class="fab fa-node-js"></i>
+                <h3>Node.js</h3>
+                <span class="skill-level proficient">Proficient</span>
+                <span class="progress-percent">70%</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="70%"></div>
+                </div>
+                <p>Berpengalaman dalam pengembangan back-end dan pembuatan API.</p>
+            </div>
+
+            <div class="skill" data-tilt data-animate data-category="backend">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <span class="skill-level proficient">Proficient</span>
+                <span class="progress-percent">75%</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="75%"></div>
+                </div>
+                <p>Keahlian kuat dalam scripting, analisis data, dan machine learning.</p>
+            </div>
+
+            <div class="skill" data-tilt data-animate data-category="database">
+                <i class="fas fa-database"></i>
+                <h3>PostgreSQL</h3>
+                <span class="skill-level proficient">Proficient</span>
+                <span class="progress-percent">75%</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="75%"></div>
+                </div>
+                <p>Untuk mengolah database saya biasa menggunakan PostgreSQL.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VanillaTilt JS untuk efek 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".skill"), {
+            max: 12,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.25,
+        });
+
+        // === Mobile Menu ===
+        const menuIcon = document.getElementById('menu-icon');
+        const nav = document.querySelector('nav');
+        if (menuIcon) {
+            menuIcon.onclick = () => nav.classList.toggle('active');
+
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => nav.classList.remove('active'));
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
+                    nav.classList.remove('active');
+                }
+            });
+        }
+
+        // === Scroll Reveal + Animated Progress Bars ===
+        const animatedEls = document.querySelectorAll('[data-animate]');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    const bar = entry.target.querySelector('.progress');
+                    if (bar) {
+                        bar.style.width = bar.dataset.width;
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        animatedEls.forEach(el => observer.observe(el));
+
+        // === Filter Tabs ===
+        const tabBtns = document.querySelectorAll('.skl-tab-btn');
+        const skillCards = document.querySelectorAll('.skill');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                skillCards.forEach(card => {
+                    const show = filter === 'all' || card.dataset.category === filter;
+                    card.style.display = show ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button id="scrollTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script>
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+
+</html>

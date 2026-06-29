@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Sertifikat dan pencapaian yang telah diraih Ardhian dalam bidang teknologi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <title>Certificates - Ardhian</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/certificate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="logo">Ardhian</a>
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="project.html">Project</a>
+      <a href="experience.html">Experience</a>
+      <a href="certificate.html" class="active">Certificates</a>
+    </nav>
+  </header>
+
+  <!-- CERTIFICATE SECTION -->
+  <section class="cert-section">
+
+    <!-- HERO HEADING -->
+    <div class="cert-heading" data-animate>
+      <span class="cert-eyebrow"><i class="fa-solid fa-award"></i> My Achievements</span>
+      <h1>Certificates</h1>
+      <p>Sertifikat yang saya raih dari berbagai program pelatihan dan kursus teknologi.</p>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="cert-stats" data-animate>
+      <div class="stat-item">
+        <span class="stat-number">5</span>
+        <span class="stat-label">Total Sertifikat</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">2</span>
+        <span class="stat-label">Lembaga Penerbit</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">2025</span>
+        <span class="stat-label">Tahun Terbaru</span>
+      </div>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="cert-tabs" data-animate>
+      <button class="tab-btn active" data-filter="all">
+        <i class="fa-solid fa-layer-group"></i> Semua
+      </button>
+      <button class="tab-btn" data-filter="huawei">
+        <i class="fa-solid fa-network-wired"></i> Huawei ICT
+      </button>
+      <button class="tab-btn" data-filter="dicoding">
+        <i class="fa-solid fa-code"></i> Dicoding
+      </button>
+    </div>
+
+    <!-- CERTIFICATE GRID -->
+    <div class="cert-grid" id="certGrid">
+
+      <!-- CARD 1: Computer Network -->
+      <div class="cert-card" data-category="huawei" data-animate>
+        <div class="cert-card-inner">
+          <div class="cert-thumb" onclick="openLightbox('img/sertifikat/cert-computer-network.jpg', 'Computer Network — Huawei ICT Academy')">
+            <img src="img/sertifikat/cert-computer-network.jpg" alt="Computer Network Certificate">
+            <div class="cert-thumb-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="cert-badge huawei-badge"><i class="fa-solid fa-network-wired"></i> Huawei ICT Academy</div>
+          <h3>Computer Network</h3>
+          <div class="cert-meta">
+            <span><i class="fa-regular fa-calendar"></i> 24 Oktober 2025</span>
+            <span><i class="fa-solid fa-barcode"></i> ICT20251024000108</span>
+          </div>
+          <button class="cert-view-btn" onclick="openLightbox('img/sertifikat/cert-computer-network.jpg', 'Computer Network — Huawei ICT Academy')">
+            <i class="fa-solid fa-eye"></i> Lihat Sertifikat
+          </button>
+        </div>
+        <div class="cert-glow huawei-glow"></div>
+      </div>
+
+      <!-- CARD 2: Overview AI -->
+      <div class="cert-card" data-category="huawei" data-animate>
+        <div class="cert-card-inner">
+          <div class="cert-thumb" onclick="openLightbox('img/sertifikat/cert-overview-ai.jpg', 'Overview of AI — Huawei ICT Academy')">
+            <img src="img/sertifikat/cert-overview-ai.jpg" alt="Overview AI Certificate">
+            <div class="cert-thumb-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="cert-badge huawei-badge"><i class="fa-solid fa-network-wired"></i> Huawei ICT Academy</div>
+          <h3>Overview of AI</h3>
+          <div class="cert-meta">
+            <span><i class="fa-regular fa-calendar"></i> 24 Oktober 2025</span>
+            <span><i class="fa-solid fa-barcode"></i> ICT20251024000766</span>
+          </div>
+          <button class="cert-view-btn" onclick="openLightbox('img/sertifikat/cert-overview-ai.jpg', 'Overview of AI — Huawei ICT Academy')">
+            <i class="fa-solid fa-eye"></i> Lihat Sertifikat
+          </button>
+        </div>
+        <div class="cert-glow huawei-glow"></div>
+      </div>
+
+      <!-- CARD 3: IoT CRA -->
+      <div class="cert-card" data-category="huawei" data-animate>
+        <div class="cert-card-inner">
+          <div class="cert-thumb" onclick="openLightbox('img/sertifikat/cert-iot-cra.jpg', 'Overview of IoT Technologies (CRA) — Huawei ICT Academy')">
+            <img src="img/sertifikat/cert-iot-cra.jpg" alt="IoT CRA Certificate">
+            <div class="cert-thumb-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="cert-badge huawei-badge"><i class="fa-solid fa-network-wired"></i> Huawei ICT Academy</div>
+          <h3>Overview of IoT Technologies <span class="cert-tag">CRA</span></h3>
+          <div class="cert-meta">
+            <span><i class="fa-regular fa-calendar"></i> 24 Oktober 2025</span>
+            <span><i class="fa-solid fa-barcode"></i> ICTCRA20251024000024</span>
+          </div>
+          <button class="cert-view-btn" onclick="openLightbox('img/sertifikat/cert-iot-cra.jpg', 'Overview of IoT Technologies (CRA) — Huawei ICT Academy')">
+            <i class="fa-solid fa-eye"></i> Lihat Sertifikat
+          </button>
+        </div>
+        <div class="cert-glow huawei-glow"></div>
+      </div>
+
+      <!-- CARD 4: IoT -->
+      <div class="cert-card" data-category="huawei" data-animate>
+        <div class="cert-card-inner">
+          <div class="cert-thumb" onclick="openLightbox('img/sertifikat/cert-iot.jpg', 'Overview of IoT Technologies — Huawei ICT Academy')">
+            <img src="img/sertifikat/cert-iot.jpg" alt="IoT Certificate">
+            <div class="cert-thumb-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="cert-badge huawei-badge"><i class="fa-solid fa-network-wired"></i> Huawei ICT Academy</div>
+          <h3>Overview of IoT Technologies</h3>
+          <div class="cert-meta">
+            <span><i class="fa-regular fa-calendar"></i> 24 Oktober 2025</span>
+            <span><i class="fa-solid fa-barcode"></i> ICT20251024000024</span>
+          </div>
+          <button class="cert-view-btn" onclick="openLightbox('img/sertifikat/cert-iot.jpg', 'Overview of IoT Technologies — Huawei ICT Academy')">
+            <i class="fa-solid fa-eye"></i> Lihat Sertifikat
+          </button>
+        </div>
+        <div class="cert-glow huawei-glow"></div>
+      </div>
+
+      <!-- CARD 5: Dicoding Dasar AI -->
+      <div class="cert-card" data-category="dicoding" data-animate>
+        <div class="cert-card-inner">
+          <div class="cert-thumb" onclick="openLightbox('img/sertifikat/cert-dasar-ai.jpg', 'Belajar Dasar AI — Dicoding Academy')">
+            <img src="img/sertifikat/cert-dasar-ai.jpg" alt="Belajar Dasar AI Certificate">
+            <div class="cert-thumb-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="cert-badge dicoding-badge"><i class="fa-solid fa-code"></i> Dicoding Academy</div>
+          <h3>Belajar Dasar AI</h3>
+          <div class="cert-meta">
+            <span><i class="fa-regular fa-calendar"></i> 12 Oktober 2025</span>
+            <span><i class="fa-solid fa-barcode"></i> 2VX354O2JPYQ</span>
+          </div>
+          <div class="cert-valid">
+            <i class="fa-solid fa-shield-check"></i> Berlaku hingga 12 Oktober 2028
+          </div>
+          <button class="cert-view-btn" onclick="openLightbox('img/sertifikat/cert-dasar-ai.jpg', 'Belajar Dasar AI — Dicoding Academy')">
+            <i class="fa-solid fa-eye"></i> Lihat Sertifikat
+          </button>
+        </div>
+        <div class="cert-glow dicoding-glow"></div>
+      </div>
+
+    </div>
+    <!-- END CERT GRID -->
+
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-box">
+      <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+      <img src="" alt="" id="lightboxImg">
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer data-animate>
+    <div class="footer-container">
+      <p class="footer-title">Hubungi Saya:</p>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ardhianmaulanatanjung@gmail.com" class="footer-link" target="_blank">
+        <i class="fa-solid fa-envelope"></i> ardhianmaulanatanjung@gmail.com
+      </a>
+      |
+      <a href="https://wa.me/6282272390283" class="footer-link" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> +62 82 7239 0283
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ardhian. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // === Mobile Menu ===
+    const menuIcon = document.getElementById('menu-icon');
+    const nav = document.querySelector('nav');
+    menuIcon.onclick = () => nav.classList.toggle('active');
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => nav.classList.remove('active'));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
+        nav.classList.remove('active');
+      }
+    });
+
+    // === Scroll Reveal ===
+    const animatedEls = document.querySelectorAll('[data-animate]');
+    const reveal = () => {
+      animatedEls.forEach((el, i) => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+          setTimeout(() => el.classList.add('visible'), i * 100);
+        }
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+
+    // === Filter Tabs ===
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const cards = document.querySelectorAll('.cert-card');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.style.display = show ? 'block' : 'none';
+          if (show) card.style.animation = 'fadeInUp 0.4s ease both';
+        });
+      });
+    });
+
+    // === Lightbox ===
+    function openLightbox(src, caption) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxCaption').textContent = caption;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button id="scrollTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script>
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
