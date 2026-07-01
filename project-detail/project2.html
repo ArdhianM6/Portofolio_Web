@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <meta name="description" content="Detail project Book Tracker oleh Ardhian.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-  <title>Project 2 - Book Tracker</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta name="description" content="Detail project Expense Tracker — aplikasi pencatat keuangan berbasis React.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <title>Project 2 - Expense Tracker</title>
   <link rel="stylesheet" href="../css/project-detail.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -29,49 +29,79 @@
   </header>
 
   <section class="project-detail">
-    <h1>Book Tracker (React)</h1>
+    <h1>Expense Tracker</h1>
     <div class="detail-tags">
       <span class="detail-tag">React</span>
+      <span class="detail-tag">JavaScript</span>
+      <span class="detail-tag">CSS</span>
     </div>
     <p class="description">
-      Web app untuk mengelola daftar buku menggunakan React.
+      Aplikasi pencatat keuangan pribadi berbasis React yang memungkinkan pengguna memantau
+      pemasukan dan pengeluaran secara real-time. Dilengkapi dengan ringkasan saldo,
+      daftar transaksi, serta kemampuan menambah dan menghapus data dengan mudah.
     </p>
 
-    <div class="detail-visual">
-      <i class="fa-solid fa-book-open"></i>
-    </div>
-
-    <div class="detail-note">
-      <i class="fa-solid fa-circle-info"></i> Dokumentasi & repository lengkap untuk project ini akan segera ditambahkan.
+    <!-- Gambar Project -->
+    <div class="image-gallery single">
+      <img src="../img/expense-tracker.jpeg" alt="Tampilan utama Expense Tracker" class="zoomable">
     </div>
 
     <div class="project-links">
-      <a href="https://github.com/ArdhianM6" target="_blank" class="btn">
-        <i class="fa-brands fa-github"></i> Lihat Profil GitHub
+      <a href="https://expense-tracker-eight-sigma-35.vercel.app/" target="_blank" class="btn">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Website
+      </a>
+      <a href="https://github.com/ArdhianM6/expense-tracker" target="_blank" class="btn">
+        <i class="fa-brands fa-github"></i> View Repository
       </a>
       <a href="../project.html" class="btn back-btn">← Kembali ke Project</a>
     </div>
   </section>
 
+  <!-- Lightbox (Zoom Overlay) -->
+  <div id="lightbox">
+    <img id="lightbox-img" src="" alt="Zoomed Image">
+  </div>
+
   <script>
     window.addEventListener("load", () => {
       document.body.classList.add("loaded");
     });
+
+    // Lightbox Zoom Logic
+    const zoomableImages = document.querySelectorAll(".zoomable");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    zoomableImages.forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add("active");
+      });
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.classList.remove("active");
+      }
+    });
+
+    let scale = 1;
+    lightboxImg.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      scale += e.deltaY * -0.001;
+      scale = Math.min(Math.max(1, scale), 3);
+      lightboxImg.style.transform = `scale(${scale})`;
+    });
   </script>
 
   <script>
-    // === Toggle Navbar (Mobile) ===
     const menuIcon = document.getElementById('menu-icon');
     const nav = document.querySelector('nav');
     if (menuIcon && nav) {
       menuIcon.onclick = () => nav.classList.toggle('active');
-
-      // Tutup menu saat salah satu link diklik
       nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => nav.classList.remove('active'));
       });
-
-      // Tutup menu saat klik di luar area nav/menu-icon
       document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
           nav.classList.remove('active');
@@ -80,23 +110,22 @@
     }
   </script>
 
-    <!-- ===== SCROLL TO TOP ===== -->
-    <button id="scrollTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-    <script>
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('show');
-            } else {
-                scrollTopBtn.classList.remove('show');
-            }
-        });
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+  <button id="scrollTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
+      }
+    });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 
 </body>
 
