@@ -1,224 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0B1220">
     <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="description" content="Kumpulan project yang pernah dikerjakan Ardhian, dari web e-commerce hingga aplikasi manajemen tugas.">
+    <meta name="description" content="Projects by Ardhian Maulana Tanjung: a full-stack Marketplace App (Next.js, Supabase, Midtrans), a Movie Search App, and an Expense Tracker.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-  <title>Project - Ardhian</title>
-  <link rel="stylesheet" href="css/project.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project.css">
+    <title>Projects | Ardhian Maulana Tanjung</title>
+
+    <!-- SEO & Social preview -->
+    <meta name="author" content="Ardhian Maulana Tanjung">
+    <link rel="canonical" href="https://DOMAIN-PORTOFOLIO-KAMU/project.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ardhian Maulana Tanjung">
+    <meta property="og:title" content="Projects | Ardhian Maulana Tanjung">
+    <meta property="og:description" content="Projects by Ardhian Maulana Tanjung: a full-stack Marketplace App (Next.js, Supabase, Midtrans), a Movie Search App, and an Expense Tracker.">
+    <meta property="og:url" content="https://DOMAIN-PORTOFOLIO-KAMU/project.html">
+    <meta property="og:image" content="https://DOMAIN-PORTOFOLIO-KAMU/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Ardhian Maulana Tanjung">
+    <meta name="twitter:description" content="Projects by Ardhian Maulana Tanjung: a full-stack Marketplace App (Next.js, Supabase, Midtrans), a Movie Search App, and an Expense Tracker.">
+    <meta name="twitter:image" content="https://DOMAIN-PORTOFOLIO-KAMU/og-image.jpg">
 </head>
-
 <body>
-  <header>
-    <a href="index.html" class="logo">Ardhian</a>
-    <i class="fa-solid fa-bars" id="menu-icon"></i>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="skills.html">Skills</a>
-      <a href="project.html" class="active">Project</a>
-      <a href="experience.html">Experience</a>
-      <a href="certificate.html">Certificates</a>
-    </nav>
-  </header>
+    <header>
+        <a href="index.html" class="logo">Ardhian</a>
+        <i class="fa-solid fa-bars" id="menu-icon" aria-label="Open menu"></i>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="skills.html">Skills</a>
+            <a href="project.html" class="active">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a href="certificate.html">Certificates</a>
+        </nav>
+    </header>
+    <section class="project-section">
+        <span class="proj-eyebrow" data-animate><i class="fa-solid fa-diagram-project"></i> Portfolio</span>
+        <h1 class="page-title" data-animate>Projects</h1>
+        <p class="page-subtitle" data-animate>Selected projects with live demos and source code.</p>
 
-  <section class="project-section">
-
-    <span class="proj-eyebrow" data-animate><i class="fa-solid fa-diagram-project"></i> Portfolio</span>
-    <h1 class="page-title" data-animate>My Projects</h1>
-    <p class="page-subtitle" data-animate>Beberapa karya dan project yang telah saya buat:</p>
-
-    <!-- STATS BAR -->
-    <div class="proj-stats" data-animate>
-      <div class="proj-stat">
-        <span class="proj-stat-num">5</span>
-        <span class="proj-stat-lbl">Total Project</span>
-      </div>
-      <div class="proj-stat-divider"></div>
-      <div class="proj-stat">
-        <span class="proj-stat-num">6+</span>
-        <span class="proj-stat-lbl">Teknologi</span>
-      </div>
-      <div class="proj-stat-divider"></div>
-      <div class="proj-stat">
-        <span class="proj-stat-num">2024</span>
-        <span class="proj-stat-lbl">Mulai Coding</span>
-      </div>
-    </div>
-
-    <!-- FILTER TABS -->
-    <div class="proj-tabs" data-animate>
-      <button class="proj-tab-btn active" data-filter="all">
-        <i class="fa-solid fa-layer-group"></i> Semua
-        </button>
-      <button class="proj-tab-btn" data-filter="frontend">
-        <i class="fa-solid fa-laptop-code"></i> Frontend
-      </button>
-      <button class="proj-tab-btn" data-filter="backend">
-        <i class="fa-solid fa-server"></i> Backend
-      </button>
-      <button class="proj-tab-btn" data-filter="fullstack">
-        <i class="fa-solid fa-layer-group"></i> Fullstack
-      </button>
-    </div>
-
-    <!-- PROJECT GRID -->
-    <div class="proj-grid">
-
-    <!-- PROJECT 1: real screenshot + real repo -->
-    <div class="project-card" data-animate data-category="frontend">
-      <img src="img/movie-search.jpeg" alt="Tampilan Movie Search App">
-        <div class="project-card-body">
-        <h3>Movie Search App</h3>
-        <div class="proj-tags">
-          <span class="proj-tag">JavaScript</span>
-          <span class="proj-tag">API</span>
+        <div class="proj-stats" data-animate>
+            <div class="proj-stat"><span class="proj-stat-num">3</span><span class="proj-stat-lbl">Projects</span></div>
+            <div class="proj-stat-divider"></div>
+            <div class="proj-stat"><span class="proj-stat-num">3</span><span class="proj-stat-lbl">Live demos</span></div>
+            <div class="proj-stat-divider"></div>
+            <div class="proj-stat"><span class="proj-stat-num">3</span><span class="proj-stat-lbl">GitHub repositories</span></div>
         </div>
-        <p>Aplikasi pencarian film yang menampilkan judul, rating, dan sinopsis menggunakan API film.</p>
-        <a href="project-detail/project1.html" class="btn">View Detail</a>
-      </div>
-    </div>
-      <!-- PROJECT 2 -->
-      <div class="project-card" data-animate data-category="frontend">
-        <img src="img/expense-tracker.jpeg" alt="Tampilan Expense Tracker">
-        <div class="project-card-body">
-          <h3>Expense Tracker</h3>
-          <div class="proj-tags">
-            <span class="proj-tag">React</span>
-            <span class="proj-tag">JavaScript</span>
-            <span class="proj-tag">CSS</span>
-          </div>
-          <p>Aplikasi pencatat keuangan untuk memantau pemasukan dan pengeluaran secara real-time.</p>
-          <a href="project-detail/project2.html" class="btn">View Detail</a>
+
+        <div class="proj-grid">
+            <div class="project-card" data-animate>
+                <div class="proj-visual">
+                    <img src="img/marketplace/home.png" alt="Marketplace App home screen with flash sales" width="886" height="895" loading="lazy" decoding="async" style="object-position: top;">
+                    <span class="proj-visual-badge">Featured &middot; Full-Stack</span>
+                </div>
+                <div class="project-card-body">
+                    <h3>Marketplace App</h3>
+                    <div class="proj-tags"><span class="proj-tag">Next.js</span><span class="proj-tag">Supabase</span><span class="proj-tag">Midtrans</span><span class="proj-tag">PostgreSQL</span></div>
+                    <p>A full-stack marketplace with Google login, flash sales, QRIS and e-wallet payments, wallet top-up, points and vouchers, real-time notifications, and an admin dashboard.</p>
+                    <a href="project-detail/project3.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-animate>
+                <img src="img/movie-search.webp" alt="Movie Search App preview" width="1200" height="547" loading="lazy" decoding="async">
+                <div class="project-card-body">
+                    <h3>Movie Search App</h3>
+                    <div class="proj-tags"><span class="proj-tag">JavaScript</span><span class="proj-tag">API</span></div>
+                    <p>A movie search app that shows titles, ratings, and synopses using a movie API.</p>
+                    <a href="project-detail/project1.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-animate>
+                <img src="img/expense-tracker.webp" alt="Expense Tracker preview" width="1200" height="547" loading="lazy" decoding="async">
+                <div class="project-card-body">
+                    <h3>Expense Tracker</h3>
+                    <div class="proj-tags"><span class="proj-tag">React</span><span class="proj-tag">JavaScript</span><span class="proj-tag">CSS</span></div>
+                    <p>A personal finance app to track income and expenses in real time.</p>
+                    <a href="project-detail/project2.html" class="btn">View Details</a>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- PROJECT 3 -->
-      <div class="project-card accent-blue" data-animate data-category="backend">
-        <div class="proj-visual blue">
-          <span class="proj-visual-badge">API</span>
-          <i class="fa-solid fa-share-nodes"></i>
+    </section>
+    <footer data-animate>
+        <div class="footer-container">
+            <p class="footer-title">Get in touch</p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ardhianmaulanatanjung@gmail.com" class="footer-link" target="_blank" rel="noopener">
+                <i class="fa-solid fa-envelope"></i> ardhianmaulanatanjung@gmail.com
+            </a>
+            |
+            <a href="https://wa.me/6282272390283" class="footer-link" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> +62 822-7239-0283
+            </a>
         </div>
-        <div class="project-card-body">
-          <h3>Social Media API</h3>
-          <div class="proj-tags">
-            <span class="proj-tag">Node.js</span>
-            <span class="proj-tag">REST API</span>
-          </div>
-          <p>API sederhana untuk fitur posting, komentar, dan followers.</p>
-          <a href="project-detail/project3.html" class="btn">View Detail</a>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ardhian Maulana Tanjung. All rights reserved.</p>
         </div>
-      </div>
-
-      <!-- PROJECT 4 -->
-      <div class="project-card" data-animate data-category="fullstack">
-        <div class="proj-visual">
-          <span class="proj-visual-badge">Fullstack</span>
-          <i class="fa-solid fa-list-check"></i>
-        </div>
-        <div class="project-card-body">
-          <h3>Task Manager</h3>
-          <div class="proj-tags">
-            <span class="proj-tag">React</span>
-            <span class="proj-tag">Node.js</span>
-          </div>
-          <p>Aplikasi manajemen tugas berbasis React dan Node.js.</p>
-          <a href="project-detail/project4.html" class="btn">View Detail</a>
-        </div>
-      </div>
-
-      <!-- PROJECT 5 -->
-      <div class="project-card accent-blue" data-animate data-category="fullstack">
-        <div class="proj-visual blue">
-          <span class="proj-visual-badge">Django</span>
-          <i class="fa-solid fa-newspaper"></i>
-        </div>
-        <div class="project-card-body">
-          <h3>Blog Website</h3>
-          <div class="proj-tags">
-            <span class="proj-tag">Django</span>
-            <span class="proj-tag">PostgreSQL</span>
-          </div>
-          <p>Platform blog dinamis dengan Django dan PostgreSQL.</p>
-          <a href="project-detail/project5.html" class="btn">View Detail</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <script>
-    // === Mobile Menu ===
-    const menuIcon = document.getElementById('menu-icon');
-    const nav = document.querySelector('nav');
-    if (menuIcon) {
-      menuIcon.onclick = () => nav.classList.toggle('active');
-
-      nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => nav.classList.remove('active'));
-      });
-
-      document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
-          nav.classList.remove('active');
-        }
-      });
-    }
-
-    // === Scroll Reveal ===
-    const animatedEls = document.querySelectorAll('[data-animate]');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 60);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    animatedEls.forEach(el => observer.observe(el));
-
-    // === Filter Tabs ===
-  const tabBtns = document.querySelectorAll('.proj-tab-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      projectCards.forEach(card => {
-      const show = filter === 'all' || card.dataset.category === filter;
-      card.style.display = show ? 'block' : 'none';
-    });
-  });
-});
-  </script>
-
-    <!-- ===== SCROLL TO TOP ===== -->
-    <button id="scrollTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    </footer>
+    <button id="scrollTopBtn" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script>
         const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('show');
-            } else {
-                scrollTopBtn.classList.remove('show');
-            }
-        });
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        window.addEventListener('scroll', () => scrollTopBtn.classList.toggle('show', window.scrollY > 300));
+        scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     </script>
-
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const nav = document.querySelector('nav');
+        if (menuIcon) {
+            menuIcon.onclick = () => nav.classList.toggle('active');
+            nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => nav.classList.remove('active')));
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !menuIcon.contains(e.target)) nav.classList.remove('active');
+            });
+        }
+        const animatedEls = document.querySelectorAll('[data-animate]');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+        }, { threshold: 0.12 });
+        animatedEls.forEach(el => io.observe(el));
+    </script>
 </body>
-
 </html>

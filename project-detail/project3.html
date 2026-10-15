@@ -4,14 +4,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <meta name="description" content="Detail project Social Media API oleh Ardhian.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-  <title>Project 3 - Social Media API</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta name="description" content="Details of the Marketplace App, a full-stack e-commerce project built with Next.js, Supabase, and Midtrans.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <title>Marketplace App | Ardhian Maulana Tanjung</title>
   <link rel="stylesheet" href="../css/project-detail.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* Galeri screenshot Marketplace App (ringkas, landscape) */
+    .shot-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 12px;
+    }
+
+    .shot {
+      margin: 0;
+      background: #101A2E;
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .shot:hover {
+      transform: translateY(-4px);
+      border-color: rgba(59, 130, 246, 0.6);
+      box-shadow: 0 8px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    .shot img {
+      display: block;
+      width: 100%;
+      height: auto;            /* penting: menimpa atribut height di tag <img> */
+      aspect-ratio: 4 / 3;
+      max-height: 240px;
+      object-fit: cover;
+      object-position: top;
+      cursor: zoom-in;
+    }
+
+    .shot figcaption {
+      padding: 10px 12px;
+      font-size: 0.82rem;
+      color: #93C5FD;
+      text-align: center;
+    }
+
+    .shot-hint {
+      color: #888;
+      font-size: 0.8rem;
+      margin: 0 0 30px;
+    }
+
+    /* Mobile: geser ke samping, tidak ditumpuk memanjang */
+    @media (max-width: 768px) {
+      .shot-gallery {
+        display: flex;
+        gap: 14px;
+        max-width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+      }
+
+      .shot {
+        flex: 0 0 78%;
+        scroll-snap-align: center;
+      }
+
+      .shot:hover {
+        transform: none;
+      }
+    }
+  </style>
+
+  <!-- SEO & Social preview -->
+  <meta name="author" content="Ardhian Maulana Tanjung">
+  <link rel="canonical" href="https://DOMAIN-PORTOFOLIO-KAMU/project-detail/project3.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ardhian Maulana Tanjung">
+  <meta property="og:title" content="Marketplace App | Ardhian Maulana Tanjung">
+  <meta property="og:description" content="Details of the Marketplace App, a full-stack e-commerce project built with Next.js, Supabase, and Midtrans.">
+  <meta property="og:url" content="https://DOMAIN-PORTOFOLIO-KAMU/project-detail/project3.html">
+  <meta property="og:image" content="https://DOMAIN-PORTOFOLIO-KAMU/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Marketplace App | Ardhian Maulana Tanjung">
+  <meta name="twitter:description" content="Details of the Marketplace App, a full-stack e-commerce project built with Next.js, Supabase, and Midtrans.">
+  <meta name="twitter:image" content="https://DOMAIN-PORTOFOLIO-KAMU/og-image.jpg">
 </head>
 
 <body>
@@ -22,41 +111,168 @@
       <a href="../index.html">Home</a>
       <a href="../about.html">About Me</a>
       <a href="../skills.html">Skills</a>
-      <a href="../project.html" class="active">Project</a>
+      <a href="../project.html" class="active">Projects</a>
       <a href="../experience.html">Experience</a>
       <a href="../certificate.html">Certificates</a>
     </nav>
   </header>
 
   <section class="project-detail">
-    <h1>Social Media API</h1>
+    <h1>Marketplace App</h1>
     <div class="detail-tags">
-      <span class="detail-tag">Node.js</span>
-      <span class="detail-tag">REST API</span>
+      <span class="detail-tag">Next.js</span>
+      <span class="detail-tag">React</span>
+      <span class="detail-tag">Supabase</span>
+      <span class="detail-tag">PostgreSQL</span>
+      <span class="detail-tag">Midtrans</span>
+      <span class="detail-tag">Vercel</span>
     </div>
     <p class="description">
-      API sederhana untuk fitur posting, komentar, dan followers.
+      A full-stack marketplace built with Next.js and Supabase. Shoppers can sign in with Google, browse discounted
+      and flash-sale products, check out with e-wallet, QRIS, or bank transfer through Midtrans, top up a wallet balance,
+      earn points and redeem vouchers. Admins manage products and categories from a dedicated dashboard.
     </p>
 
-    <div class="detail-visual blue">
-      <i class="fa-solid fa-share-nodes"></i>
+    <!-- Screenshots -->
+    <div class="shot-gallery">
+      <figure class="shot">
+        <img src="../img/marketplace/home.png" alt="Marketplace App home screen with categories, discounted products and flash sales" class="zoomable" width="886" height="895" loading="lazy" decoding="async">
+        <figcaption>Home &amp; flash sales</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="../img/marketplace/checkout.png" alt="Marketplace App cart with delivery options and payment methods" class="zoomable" width="889" height="891" loading="lazy" decoding="async">
+        <figcaption>Cart, delivery &amp; payment</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="../img/marketplace/account.png" alt="Marketplace App account page with wallet balance and points" class="zoomable" width="858" height="889" loading="lazy" decoding="async">
+        <figcaption>Account, balance &amp; points</figcaption>
+      </figure>
+    </div>
+    <p class="shot-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Click a screenshot to see the full screen.</p>
+
+    <div class="detail-notes">
+      <span class="detail-note"><i class="fa-solid fa-circle-info"></i> Payments run in Midtrans Sandbox, so transactions are simulated and no real money is used.</span>
+      <span class="detail-note warn"><i class="fa-solid fa-hourglass-half"></i> The first load may be slow if the free-tier database is waking up. Please try again in a moment.</span>
     </div>
 
-    <div class="detail-note">
-      <i class="fa-solid fa-circle-info"></i> Dokumentasi & repository lengkap untuk project ini akan segera ditambahkan.
+    <div class="detail-section">
+      <h2><i class="fa-solid fa-list-check"></i> Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <h3>Authentication</h3>
+          <p>Sign in with Google, Facebook, or email through Supabase Auth, with an onboarding flow for new users.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>Flash Sales</h3>
+          <p>Time-limited prices with countdown timers. The app picks the active price: flash sale, discount, or regular.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-credit-card"></i>
+          <h3>Checkout &amp; Payments</h3>
+          <p>Midtrans Snap for e-wallet and bank transfer, plus QRIS through the Core API, with payment status updated by webhook.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-wallet"></i>
+          <h3>Wallet Top-Up</h3>
+          <p>Users top up their balance by scanning a QRIS code generated inside the app.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-truck-fast"></i>
+          <h3>Delivery &amp; Map</h3>
+          <p>Addresses are picked on a Leaflet map. Shipping fees are tiered by distance, with normal, fast, and scheduled delivery.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-gift"></i>
+          <h3>Points, Vouchers &amp; Referral</h3>
+          <p>Points are earned automatically on paid orders and can be redeemed for vouchers. Referral codes are supported.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-bell"></i>
+          <h3>Real-Time Notifications</h3>
+          <p>Order and wallet updates are pushed to users through Supabase Realtime.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-star"></i>
+          <h3>Orders, Reviews &amp; Wishlist</h3>
+          <p>Order tracking with status history, product ratings and reviews, and a saved-items wishlist.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-user-shield"></i>
+          <h3>Admin Dashboard</h3>
+          <p>Role-based access for admins to manage products and categories.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2><i class="fa-solid fa-gears"></i> Technical Highlights</h2>
+      <ul class="highlight-list">
+        <li><strong>Row Level Security:</strong> Supabase RLS policies restrict each user to their own data, and the service-role key is only used on the server.</li>
+        <li><strong>Secure webhooks:</strong> the payment webhook verifies the Midtrans SHA-512 signature before updating any order or wallet top-up.</li>
+        <li><strong>Database logic:</strong> order creation and voucher redemption run as PostgreSQL functions, and a trigger awards points when an order is paid.</li>
+        <li><strong>Distance-based shipping:</strong> fees are calculated with the Haversine formula from the store to the selected map location.</li>
+        <li><strong>Deployment:</strong> hosted on Vercel with environment variables for all secrets, connected to Supabase and Midtrans Sandbox.</li>
+      </ul>
     </div>
 
     <div class="project-links">
-      <a href="https://github.com/ArdhianM6" target="_blank" class="btn">
-        <i class="fa-brands fa-github"></i> Lihat Profil GitHub
+      <a href="https://marketplace-app-eight-delta.vercel.app" target="_blank" rel="noopener noreferrer" class="btn">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Website
       </a>
-      <a href="../project.html" class="btn back-btn">← Kembali ke Project</a>
+      <a href="https://github.com/ArdhianM6/marketplace-app" target="_blank" rel="noopener noreferrer" class="btn">
+        <i class="fa-brands fa-github"></i> View Repository
+      </a>
+      <a href="../project.html" class="btn back-btn">← Back to Projects</a>
     </div>
   </section>
+
+  <!-- Lightbox (Zoom Overlay) -->
+  <div id="lightbox">
+    <img id="lightbox-img" src="" alt="Zoomed screenshot">
+  </div>
 
   <script>
     window.addEventListener("load", () => {
       document.body.classList.add("loaded");
+    });
+  </script>
+
+  <script>
+    // === Lightbox Zoom ===
+    const zoomableImages = document.querySelectorAll(".zoomable");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    let scale = 1;
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      scale = 1;
+      lightboxImg.style.transform = "scale(1)";
+    }
+
+    zoomableImages.forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add("active");
+      });
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target !== lightboxImg) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+
+    lightboxImg.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      scale += e.deltaY * -0.001;
+      scale = Math.min(Math.max(1, scale), 3);
+      lightboxImg.style.transform = `scale(${scale})`;
     });
   </script>
 
@@ -66,13 +282,9 @@
     const nav = document.querySelector('nav');
     if (menuIcon && nav) {
       menuIcon.onclick = () => nav.classList.toggle('active');
-
-      // Tutup menu saat salah satu link diklik
       nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => nav.classList.remove('active'));
       });
-
-      // Tutup menu saat klik di luar area nav/menu-icon
       document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
           nav.classList.remove('active');
@@ -81,23 +293,19 @@
     }
   </script>
 
-    <!-- ===== SCROLL TO TOP ===== -->
-    <button id="scrollTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-    <script>
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('show');
-            } else {
-                scrollTopBtn.classList.remove('show');
-            }
-        });
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button id="scrollTopBtn" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('show', window.scrollY > 300);
+    });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 
 </body>
 

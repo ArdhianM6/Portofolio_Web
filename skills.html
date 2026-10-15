@@ -1,230 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0B1220">
     <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="description" content="Daftar skill dan teknologi yang dikuasai Ardhian, mulai dari HTML, CSS, JavaScript, hingga React.">
+    <meta name="description" content="Skills of Ardhian Maulana Tanjung: HTML/CSS, JavaScript, React.js, Next.js, PHP, Node.js, Python, SQL, MySQL, Supabase, and Git.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Skills - Ardhian</title>
-
-    <!-- Font Awesome untuk ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Skills | Ardhian Maulana Tanjung</title>
 
+    <!-- SEO & Social preview -->
+    <meta name="author" content="Ardhian Maulana Tanjung">
+    <link rel="canonical" href="https://DOMAIN-PORTOFOLIO-KAMU/skills.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ardhian Maulana Tanjung">
+    <meta property="og:title" content="Skills | Ardhian Maulana Tanjung">
+    <meta property="og:description" content="Skills of Ardhian Maulana Tanjung: HTML/CSS, JavaScript, React.js, Next.js, PHP, Node.js, Python, SQL, MySQL, Supabase, and Git.">
+    <meta property="og:url" content="https://DOMAIN-PORTOFOLIO-KAMU/skills.html">
+    <meta property="og:image" content="https://DOMAIN-PORTOFOLIO-KAMU/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Skills | Ardhian Maulana Tanjung">
+    <meta name="twitter:description" content="Skills of Ardhian Maulana Tanjung: HTML/CSS, JavaScript, React.js, Next.js, PHP, Node.js, Python, SQL, MySQL, Supabase, and Git.">
+    <meta name="twitter:image" content="https://DOMAIN-PORTOFOLIO-KAMU/og-image.jpg">
+</head>
 <body>
     <header>
         <a href="index.html" class="logo">Ardhian</a>
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
-
+        <i class="fa-solid fa-bars" id="menu-icon" aria-label="Open menu"></i>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
             <a href="skills.html" class="active">Skills</a>
-            <a href="project.html">Project</a>
+            <a href="project.html">Projects</a>
             <a href="experience.html">Experience</a>
             <a href="certificate.html">Certificates</a>
         </nav>
     </header>
-
     <section class="skills-section">
-
-        <!-- HERO HEADING -->
         <div class="skills-heading" data-animate>
-            <span class="skl-eyebrow"><i class="fa-solid fa-code"></i> Tech Stack</span>
+            <span class="skl-eyebrow"><i class="fa-solid fa-code"></i> Tech stack</span>
             <h1>Skills</h1>
-            <p>Berikut beberapa skill pemrograman yang saya miliki berdasarkan project yang pernah saya kerjakan.</p>
+            <p>The technologies I use to build web applications, from the interface to the database.</p>
         </div>
 
-        <!-- STATS BAR -->
         <div class="skl-stats" data-animate>
-            <div class="skl-stat">
-                <span class="skl-stat-num">6</span>
-                <span class="skl-stat-lbl">Total Skill</span>
-            </div>
+            <div class="skl-stat"><span class="skl-stat-num">13</span><span class="skl-stat-lbl">Skills</span></div>
             <div class="skl-stat-divider"></div>
-            <div class="skl-stat">
-                <span class="skl-stat-num">3</span>
-                <span class="skl-stat-lbl">Kategori</span>
-            </div>
+            <div class="skl-stat"><span class="skl-stat-num">4</span><span class="skl-stat-lbl">Categories</span></div>
             <div class="skl-stat-divider"></div>
-            <div class="skl-stat">
-                <span class="skl-stat-num">75%</span>
-                <span class="skl-stat-lbl">Rata-rata Level</span>
-            </div>
+            <div class="skl-stat"><span class="skl-stat-num">68%</span><span class="skl-stat-lbl">Average level</span></div>
         </div>
 
-        <!-- FILTER TABS -->
         <div class="skl-tabs" data-animate>
-            <button class="skl-tab-btn active" data-filter="all">
-                <i class="fa-solid fa-layer-group"></i> Semua
-            </button>
-            <button class="skl-tab-btn" data-filter="frontend">
-                <i class="fa-solid fa-laptop-code"></i> Frontend
-            </button>
-            <button class="skl-tab-btn" data-filter="backend">
-                <i class="fa-solid fa-server"></i> Backend
-            </button>
-            <button class="skl-tab-btn" data-filter="database">
-                <i class="fa-solid fa-database"></i> Database
-            </button>
+            <button class="skl-tab-btn active" data-filter="all"><i class="fa-solid fa-layer-group"></i> All</button>
+            <button class="skl-tab-btn" data-filter="frontend"><i class="fa-solid fa-laptop-code"></i> Front-End</button>
+            <button class="skl-tab-btn" data-filter="backend"><i class="fa-solid fa-server"></i> Back-End</button>
+            <button class="skl-tab-btn" data-filter="database"><i class="fa-solid fa-database"></i> Database</button>
+            <button class="skl-tab-btn" data-filter="tools"><i class="fa-solid fa-screwdriver-wrench"></i> Tools</button>
         </div>
 
-        <!-- Skills Grid -->
         <div class="skills-container" id="skillsGrid">
-
-            <div class="skill" data-tilt data-animate data-category="frontend">
+            <div class="skill" data-animate data-category="frontend">
                 <i class="fab fa-html5"></i>
                 <h3>HTML / CSS</h3>
-                <span class="skill-level advanced">Advanced</span>
-                <span class="progress-percent">90%</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="90%"></div>
-                </div>
-                <p>Pengalaman mendesain website menggunakan HTML dan CSS.</p>
+                <span class="skill-level proficient">Proficient</span>
+                <span class="progress-percent">75%</span>
+                <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+                <p>Building responsive, well-structured web pages and interfaces.</p>
             </div>
 
-            <div class="skill" data-tilt data-animate data-category="frontend">
+            <div class="skill" data-animate data-category="frontend">
                 <i class="fab fa-js"></i>
                 <h3>JavaScript</h3>
                 <span class="skill-level proficient">Proficient</span>
                 <span class="progress-percent">70%</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="70%"></div>
-                </div>
-                <p>Mampu membangun aplikasi web yang interaktif dan dinamis.</p>
+                <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                <p>Interactive web apps, such as my Movie Search App.</p>
             </div>
 
-            <div class="skill" data-tilt data-animate data-category="frontend">
+            <div class="skill" data-animate data-category="frontend">
                 <i class="fab fa-react"></i>
-                <h3>React</h3>
-                <span class="skill-level proficient">Proficient</span>
-                <span class="progress-percent">69%</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="69%"></div>
-                </div>
-                <p>Terampil dalam membangun aplikasi front-end yang dapat diskalakan.</p>
+                <h3>React.js</h3>
+                <span class="skill-level intermediate">Intermediate</span>
+                <span class="progress-percent">60%</span>
+                <div class="progress-bar"><div class="progress" data-width="60%"></div></div>
+                <p>Component-based front ends, such as my Expense Tracker.</p>
             </div>
 
-            <div class="skill" data-tilt data-animate data-category="backend">
+            <div class="skill" data-animate data-category="frontend">
+                <i class="fa-solid fa-n"></i>
+                <h3>Next.js</h3>
+                <span class="skill-level intermediate">Intermediate</span>
+                <span class="progress-percent">60%</span>
+                <div class="progress-bar"><div class="progress" data-width="60%"></div></div>
+                <p>Full-stack apps with the App Router and API routes, such as my Marketplace App.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="backend">
+                <i class="fab fa-php"></i>
+                <h3>PHP</h3>
+                <span class="skill-level intermediate">Intermediate</span>
+                <span class="progress-percent">65%</span>
+                <div class="progress-bar"><div class="progress" data-width="65%"></div></div>
+                <p>Used in both of my web internships.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="backend">
                 <i class="fab fa-node-js"></i>
                 <h3>Node.js</h3>
-                <span class="skill-level proficient">Proficient</span>
-                <span class="progress-percent">70%</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="70%"></div>
-                </div>
-                <p>Berpengalaman dalam pengembangan back-end dan pembuatan API.</p>
+                <span class="skill-level intermediate">Intermediate</span>
+                <span class="progress-percent">65%</span>
+                <div class="progress-bar"><div class="progress" data-width="65%"></div></div>
+                <p>Server-side development with JavaScript.</p>
             </div>
 
-            <div class="skill" data-tilt data-animate data-category="backend">
+            <div class="skill" data-animate data-category="backend">
                 <i class="fab fa-python"></i>
                 <h3>Python</h3>
-                <span class="skill-level proficient">Proficient</span>
-                <span class="progress-percent">75%</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="75%"></div>
-                </div>
-                <p>Keahlian kuat dalam scripting, analisis data, dan machine learning.</p>
+                <span class="skill-level advanced">Advanced</span>
+                <span class="progress-percent">80%</span>
+                <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                <p>Scripting, programming fundamentals, and problem solving.</p>
             </div>
 
-            <div class="skill" data-tilt data-animate data-category="database">
+            <div class="skill" data-animate data-category="database">
                 <i class="fas fa-database"></i>
-                <h3>PostgreSQL</h3>
+                <h3>SQL</h3>
                 <span class="skill-level proficient">Proficient</span>
-                <span class="progress-percent">75%</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="75%"></div>
-                </div>
-                <p>Untuk mengolah database saya biasa menggunakan PostgreSQL.</p>
+                <span class="progress-percent">70%</span>
+                <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                <p>Writing queries to store, retrieve, and manage data.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="database">
+                <i class="fas fa-table"></i>
+                <h3>MySQL</h3>
+                <span class="skill-level proficient">Proficient</span>
+                <span class="progress-percent">70%</span>
+                <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                <p>Working with relational databases for web applications.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="database">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Supabase</h3>
+                <span class="skill-level intermediate">Intermediate</span>
+                <span class="progress-percent">60%</span>
+                <div class="progress-bar"><div class="progress" data-width="60%"></div></div>
+                <p>Auth, PostgreSQL, Row Level Security, and realtime features in my Marketplace App.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="tools">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git</h3>
+                <span class="skill-level intermediate">Intermediate</span>
+                <span class="progress-percent">65%</span>
+                <div class="progress-bar"><div class="progress" data-width="65%"></div></div>
+                <p>Version control and collaboration through GitHub.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="tools">
+                <i class="fab fa-wordpress"></i>
+                <h3>WordPress</h3>
+                <span class="skill-level proficient">Proficient</span>
+                <span class="progress-percent">70%</span>
+                <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                <p>Building and managing websites with a CMS.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="tools">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Prompt Engineering</h3>
+                <span class="skill-level proficient">Proficient</span>
+                <span class="progress-percent">70%</span>
+                <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                <p>Writing clear, effective prompts for AI tools.</p>
             </div>
         </div>
+
+        <div class="skl-stats" data-animate style="margin-top:3rem">
+            <div class="skl-stat" style="max-width:640px"><span class="skl-stat-lbl" style="text-transform:none;font-size:0.95rem;letter-spacing:0;color:#CBD5E1"><strong style="color:#93C5FD">Soft skills:</strong> Problem Solving, Communication, Teamwork, Time Management, Adaptability, Fast Learner, Working Under Pressure</span></div>
+        </div>
     </section>
-
-    <!-- VanillaTilt JS untuk efek 3D -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <button id="scrollTopBtn" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script>
-        VanillaTilt.init(document.querySelectorAll(".skill"), {
-            max: 12,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.25,
-        });
-
-        // === Mobile Menu ===
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => scrollTopBtn.classList.toggle('show', window.scrollY > 300));
+        scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+    <script>
         const menuIcon = document.getElementById('menu-icon');
         const nav = document.querySelector('nav');
         if (menuIcon) {
             menuIcon.onclick = () => nav.classList.toggle('active');
-
-            nav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => nav.classList.remove('active'));
-            });
-
+            nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => nav.classList.remove('active')));
             document.addEventListener('click', (e) => {
-                if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
-                    nav.classList.remove('active');
-                }
+                if (!nav.contains(e.target) && !menuIcon.contains(e.target)) nav.classList.remove('active');
             });
         }
-
-        // === Scroll Reveal + Animated Progress Bars ===
-        const animatedEls = document.querySelectorAll('[data-animate]');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    const bar = entry.target.querySelector('.progress');
-                    if (bar) {
-                        bar.style.width = bar.dataset.width;
-                    }
-                    observer.unobserve(entry.target);
+        const bars = document.querySelectorAll('[data-animate]');
+        const io2 = new IntersectionObserver((entries) => {
+            entries.forEach(en => {
+                if (en.isIntersecting) {
+                    en.target.classList.add('visible');
+                    const bar = en.target.querySelector('.progress');
+                    if (bar) bar.style.width = bar.dataset.width;
+                    io2.unobserve(en.target);
                 }
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0.15 });
+        bars.forEach(el => io2.observe(el));
 
-        animatedEls.forEach(el => observer.observe(el));
-
-        // === Filter Tabs ===
         const tabBtns = document.querySelectorAll('.skl-tab-btn');
         const skillCards = document.querySelectorAll('.skill');
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                tabBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filter = btn.dataset.filter;
-                skillCards.forEach(card => {
-                    const show = filter === 'all' || card.dataset.category === filter;
-                    card.style.display = show ? 'block' : 'none';
-                });
+        tabBtns.forEach(btn => btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const f = btn.dataset.filter;
+            skillCards.forEach(card => {
+                const show = f === 'all' || card.dataset.category === f;
+                card.style.display = show ? 'block' : 'none';
+                if (show) { card.classList.add('visible'); const b = card.querySelector('.progress'); if (b) b.style.width = b.dataset.width; }
             });
-        });
+        }));
     </script>
-
-
-    <!-- ===== SCROLL TO TOP ===== -->
-    <button id="scrollTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-    <script>
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('show');
-            } else {
-                scrollTopBtn.classList.remove('show');
-            }
-        });
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-
 </body>
-
 </html>
