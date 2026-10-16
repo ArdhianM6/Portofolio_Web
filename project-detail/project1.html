@@ -34,12 +34,12 @@
 <body>
   <header>
     <a href="../index.html" class="logo">Ardhian</a>
-    <i id="menu-icon" class="fa-solid fa-bars"></i>
-    <nav>
+    <i class="fa-solid fa-bars" id="menu-icon" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"></i>
+    <nav id="site-nav">
       <a href="../index.html">Home</a>
       <a href="../about.html">About Me</a>
       <a href="../skills.html">Skills</a>
-      <a href="../project.html" class="active">Projects</a>
+      <a href="../project.html" class="active" aria-current="page">Projects</a>
       <a href="../experience.html">Experience</a>
       <a href="../certificate.html">Certificates</a>
     </nav>
@@ -53,12 +53,59 @@
     </div>
     <p class="description">
       A JavaScript movie search app that uses a movie API to show the title, poster, rating, and synopsis
-      of each result based on what the user searches for.
+      of each result based on what the user searches for. Beyond searching, it lets users browse trending titles,
+      explore movies by region, filter and sort the results, and keep a list of favorites.
     </p>
 
     <!-- Gambar Project -->
     <div class="image-gallery single">
       <img src="../img/movie-search1.webp" alt="Main screen of the Movie Search App" class="zoomable" width="1600" height="740" decoding="async">
+    </div>
+
+    <div class="detail-section">
+      <h2><i class="fa-solid fa-list-check"></i> Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>Movie Search</h3>
+          <p>Type a title and get matching results with poster, title, and rating shown on each card.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-fire"></i>
+          <h3>Trending Now</h3>
+          <p>The home page highlights currently trending titles, so there is something to explore before searching.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-globe"></i>
+          <h3>Browse by Region</h3>
+          <p>Separate views for Indonesian, English, Japanese, and Korean titles, plus a dedicated Anime section.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-filter"></i>
+          <h3>Filter &amp; Sort</h3>
+          <p>Narrow results by type and change the sort order to find what you want faster.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-heart"></i>
+          <h3>Favorites</h3>
+          <p>Tap the heart on any movie to save it, and open the Favorites page to see your saved list.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-star"></i>
+          <h3>Ratings at a Glance</h3>
+          <p>Each poster carries its rating badge, so you can compare movies without opening them.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2><i class="fa-solid fa-circle-info"></i> Project Summary</h2>
+      <ul class="highlight-list">
+        <li><strong>Type:</strong> a web app that fetches live movie data from an external API.</li>
+        <li><strong>Built with:</strong> JavaScript, with movie data loaded from an API.</li>
+        <li><strong>Interface language:</strong> Indonesian.</li>
+        <li><strong>Hosting:</strong> deployed on Vercel, with the source code on GitHub.</li>
+      </ul>
     </div>
 
     <div class="project-links">
@@ -117,17 +164,19 @@
     const menuIcon = document.getElementById('menu-icon');
     const nav = document.querySelector('nav');
     if (menuIcon && nav) {
-      menuIcon.onclick = () => nav.classList.toggle('active');
+      const setMenu = (open) => { nav.classList.toggle('active', open); menuIcon.setAttribute('aria-expanded', String(nav.classList.contains('active'))); };
+      menuIcon.onclick = () => setMenu(!nav.classList.contains('active'));
+      menuIcon.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); menuIcon.click(); } });
 
       // Tutup menu saat salah satu link diklik
       nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => nav.classList.remove('active'));
+        link.addEventListener('click', () => setMenu(false));
       });
 
       // Tutup menu saat klik di luar area nav/menu-icon
       document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
-          nav.classList.remove('active');
+          setMenu(false);
         }
       });
     }

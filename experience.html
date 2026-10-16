@@ -34,13 +34,13 @@
 <body>
     <header>
         <a href="index.html" class="logo">Ardhian</a>
-        <i class="fa-solid fa-bars" id="menu-icon" aria-label="Open menu"></i>
-        <nav>
+        <i class="fa-solid fa-bars" id="menu-icon" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"></i>
+        <nav id="site-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
             <a href="skills.html">Skills</a>
             <a href="project.html">Projects</a>
-            <a href="experience.html" class="active">Experience</a>
+            <a href="experience.html" class="active" aria-current="page">Experience</a>
             <a href="certificate.html">Certificates</a>
         </nav>
     </header>
@@ -141,10 +141,12 @@
         const menuIcon = document.getElementById('menu-icon');
         const nav = document.querySelector('nav');
         if (menuIcon) {
-            menuIcon.onclick = () => nav.classList.toggle('active');
-            nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => nav.classList.remove('active')));
+            const setMenu = (open) => { nav.classList.toggle('active', open); menuIcon.setAttribute('aria-expanded', String(nav.classList.contains('active'))); };
+            menuIcon.onclick = () => setMenu(!nav.classList.contains('active'));
+            menuIcon.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); menuIcon.click(); } });
+            nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => setMenu(false)));
             document.addEventListener('click', (e) => {
-                if (!nav.contains(e.target) && !menuIcon.contains(e.target)) nav.classList.remove('active');
+                if (!nav.contains(e.target) && !menuIcon.contains(e.target)) setMenu(false);
             });
         }
         const animatedEls = document.querySelectorAll('[data-animate]');

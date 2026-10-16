@@ -14,11 +14,51 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Ardhian Maulana Tanjung | Full-Stack Developer</title>
     <style>
-        #preloader { position: fixed; inset: 0; background: #0B1220; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity .5s ease, visibility .5s ease; }
-        #preloader.hide { opacity: 0; visibility: hidden; }
-        .preloader-logo { font-size: 1.8rem; font-weight: 700; color: #3B82F6; margin-bottom: 20px; letter-spacing: 2px; }
-        .preloader-spinner { width: 38px; height: 38px; border: 4px solid rgba(59,130,246,.2); border-top-color: #3B82F6; border-radius: 50%; animation: pl-spin .8s linear infinite; }
-        @keyframes pl-spin { to { transform: rotate(360deg); } }
+        /* ---- Open to work badge ---- */
+        .open-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 30px; background: rgba(34,197,94,.12); border: 1px solid rgba(34,197,94,.35); color: #86EFAC; font-size: .8rem; font-weight: 600; margin-bottom: 14px; }
+        .open-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #22C55E; animation: open-pulse 2s infinite; }
+        @keyframes open-pulse { 0% { box-shadow: 0 0 0 0 rgba(34,197,94,.55); } 70% { box-shadow: 0 0 0 8px rgba(34,197,94,0); } 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); } }
+
+        /* ---- Home: jarak dari header & tampilan HP/tablet ---- */
+        .home { padding-top: 130px; padding-bottom: 60px; }
+        @media (max-width: 995px) {
+            .home { min-height: auto; padding: 115px 6% 50px; gap: 1.8rem; text-align: center; }
+            .home-content { max-width: 560px; width: 100%; }
+            .home-content h3 { font-size: 1.5rem; }
+            .social-icons, .cta-buttons { justify-content: center; }
+            .cta-buttons .btn { margin-top: 18px; }
+        }
+        @media (max-width: 600px) {
+            .home { padding: 100px 6% 40px; gap: 1.4rem; }
+            .home-img img { width: 220px; height: 220px; }
+            .home-content h1 { font-size: 1.8rem; }
+            .home-content h3 { font-size: 1.25rem; }
+            .home-content p { font-size: .95rem; line-height: 1.7; }
+        }
+
+        /* ---- Featured Projects ---- */
+        .featured { max-width: 1300px; margin: 0 auto; padding: 30px 8% 90px; text-align: center; }
+        .feat-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #93C5FD; background: rgba(59,130,246,.12); border: 1px solid rgba(59,130,246,.3); padding: 6px 14px; border-radius: 30px; }
+        .featured-head h2 { font-size: 2.4rem; margin: 14px 0 8px; }
+        .featured-head p { color: #cbd5e1; max-width: 560px; margin: 0 auto; }
+        .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; text-align: left; }
+        .feat-card { display: flex; flex-direction: column; background: #101A2E; border: 1px solid rgba(59,130,246,.3); border-radius: 15px; overflow: hidden; text-decoration: none; color: #fff; transition: opacity .8s ease-out, transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+        .feat-card:hover { transform: translateY(-8px); box-shadow: 0 14px 35px rgba(59,130,246,.35); border-color: rgba(59,130,246,.7); }
+        .feat-thumb { height: 180px; overflow: hidden; background: #0B1220; }
+        .feat-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+        .feat-card:hover .feat-thumb img { transform: scale(1.05); }
+        .feat-body { display: flex; flex-direction: column; flex: 1; padding: 18px 20px 20px; }
+        .feat-body h3 { font-size: 1.15rem; margin-bottom: 10px; }
+        .feat-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+        .feat-tag { font-size: .7rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: rgba(59,130,246,.12); color: #93C5FD; border: 1px solid rgba(59,130,246,.3); }
+        .feat-body p { flex: 1; color: #cbd5e1; font-size: .9rem; line-height: 1.6; margin-bottom: 14px; }
+        .feat-link { color: #60A5FA; font-weight: 600; font-size: .9rem; }
+        .feat-link i { margin-left: 6px; transition: transform .3s ease; }
+        .feat-card:hover .feat-link i { transform: translateX(5px); }
+        .feat-more { margin-top: 34px; }
+        @media (max-width: 1000px) { .feat-grid { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; } }
+        @media (max-width: 480px) { .featured { padding: 20px 6% 70px; } .featured-head h2 { font-size: 1.9rem; } }
+        @media (prefers-reduced-motion: reduce) { .open-badge .dot { animation: none; } .feat-card, .feat-thumb img, .feat-link i { transition: none; } }
     </style>
 
     <!-- SEO & Social preview -->
@@ -55,12 +95,11 @@
     </script>
 </head>
 <body>
-    <div id="preloader"><div class="preloader-logo">Ardhian</div><div class="preloader-spinner"></div></div>
     <header>
         <a href="index.html" class="logo">Ardhian</a>
-        <i class="fa-solid fa-bars" id="menu-icon" aria-label="Open menu"></i>
-        <nav>
-            <a href="index.html" class="active">Home</a>
+        <i class="fa-solid fa-bars" id="menu-icon" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"></i>
+        <nav id="site-nav">
+            <a href="index.html" class="active" aria-current="page">Home</a>
             <a href="about.html">About Me</a>
             <a href="skills.html">Skills</a>
             <a href="project.html">Projects</a>
@@ -74,6 +113,7 @@
         </div>
 
         <div class="home-content" data-animate>
+            <span class="open-badge"><span class="dot"></span> Open to work</span>
             <h1>Hi, I'm <span>Ardhian Maulana Tanjung</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
             <p>
@@ -93,6 +133,56 @@
                 <a href="#" class="btn hire-btn">Hire Me</a>
                 <a href="cv-ardhian.pdf" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-solid fa-file-pdf"></i> View CV</a>
             </div>
+        </div>
+    </section>
+
+    <section class="featured" id="featured">
+        <div class="featured-head" data-animate>
+            <span class="feat-eyebrow"><i class="fa-solid fa-star"></i> Featured work</span>
+            <h2>Featured Projects</h2>
+            <p>A few things I've built. Each one has a live demo and source code.</p>
+        </div>
+
+        <div class="feat-grid">
+            <a href="project-detail/project3.html" class="feat-card" data-animate>
+                <div class="feat-thumb">
+                    <img src="img/marketplace/home.png" alt="Marketplace App home screen" width="886" height="895" loading="lazy" decoding="async" style="object-position: top;">
+                </div>
+                <div class="feat-body">
+                    <h3>Marketplace App</h3>
+                    <div class="feat-tags"><span class="feat-tag">Next.js</span><span class="feat-tag">Supabase</span><span class="feat-tag">Midtrans</span></div>
+                    <p>A full-stack marketplace with Google login, flash sales, QRIS and e-wallet payments, points and vouchers, and an admin dashboard.</p>
+                    <span class="feat-link">View details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <a href="project-detail/project1.html" class="feat-card" data-animate>
+                <div class="feat-thumb">
+                    <img src="img/movie-search.webp" alt="Movie Search App preview" width="1200" height="547" loading="lazy" decoding="async">
+                </div>
+                <div class="feat-body">
+                    <h3>Movie Search App</h3>
+                    <div class="feat-tags"><span class="feat-tag">JavaScript</span><span class="feat-tag">API</span></div>
+                    <p>Search movies, browse trending titles by region, filter and sort results, and save favorites.</p>
+                    <span class="feat-link">View details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <a href="project-detail/project2.html" class="feat-card" data-animate>
+                <div class="feat-thumb">
+                    <img src="img/expense-tracker.webp" alt="Expense Tracker preview" width="1200" height="547" loading="lazy" decoding="async">
+                </div>
+                <div class="feat-body">
+                    <h3>Expense Tracker</h3>
+                    <div class="feat-tags"><span class="feat-tag">React</span><span class="feat-tag">JavaScript</span><span class="feat-tag">CSS</span></div>
+                    <p>A personal finance app with a dashboard, spending charts, and a searchable transaction list.</p>
+                    <span class="feat-link">View details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+
+        <div class="feat-more" data-animate>
+            <a href="project.html" class="btn btn-outline">View all projects</a>
         </div>
     </section>
 
@@ -158,10 +248,12 @@
         const menuIcon = document.getElementById('menu-icon');
         const nav = document.querySelector('nav');
         if (menuIcon) {
-            menuIcon.onclick = () => nav.classList.toggle('active');
-            nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => nav.classList.remove('active')));
+            const setMenu = (open) => { nav.classList.toggle('active', open); menuIcon.setAttribute('aria-expanded', String(nav.classList.contains('active'))); };
+            menuIcon.onclick = () => setMenu(!nav.classList.contains('active'));
+            menuIcon.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); menuIcon.click(); } });
+            nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => setMenu(false)));
             document.addEventListener('click', (e) => {
-                if (!nav.contains(e.target) && !menuIcon.contains(e.target)) nav.classList.remove('active');
+                if (!nav.contains(e.target) && !menuIcon.contains(e.target)) setMenu(false);
             });
         }
         const els = document.querySelectorAll('[data-animate]');
@@ -198,6 +290,5 @@
             } finally { hireSubmitBtn.disabled = false; hireSubmitBtn.textContent = 'Send'; }
         });
     </script>
-    <script>window.addEventListener('load', () => { const p = document.getElementById('preloader'); if (p) setTimeout(() => p.classList.add('hide'), 300); });</script>
 </body>
 </html>

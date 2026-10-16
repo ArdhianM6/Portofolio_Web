@@ -34,12 +34,12 @@
 <body>
   <header>
     <a href="../index.html" class="logo">Ardhian</a>
-    <i id="menu-icon" class="fa-solid fa-bars"></i>
-    <nav>
+    <i class="fa-solid fa-bars" id="menu-icon" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"></i>
+    <nav id="site-nav">
       <a href="../index.html">Home</a>
       <a href="../about.html">About Me</a>
       <a href="../skills.html">Skills</a>
-      <a href="../project.html" class="active">Projects</a>
+      <a href="../project.html" class="active" aria-current="page">Projects</a>
       <a href="../experience.html">Experience</a>
       <a href="../certificate.html">Certificates</a>
     </nav>
@@ -53,13 +53,60 @@
       <span class="detail-tag">CSS</span>
     </div>
     <p class="description">
-      A personal finance app built with React that lets users track income and expenses in real time.
-      It includes a balance summary, a transaction list, and simple ways to add and delete entries.
+      Wallet Watch is a personal finance app built with React that lets users track income and expenses in real time.
+      It includes a balance summary, a transaction list, simple ways to add and delete entries, and a dashboard
+      with charts that show where the money goes.
     </p>
 
     <!-- Gambar Project -->
     <div class="image-gallery single">
       <img src="../img/expense-tracker.webp" alt="Main screen of the Expense Tracker" class="zoomable" width="1200" height="547" decoding="async">
+    </div>
+
+    <div class="detail-section">
+      <h2><i class="fa-solid fa-list-check"></i> Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="fa-solid fa-plus"></i>
+          <h3>Record Transactions</h3>
+          <p>Add income and expenses quickly with a single &ldquo;Catat&rdquo; (Record) button, and delete entries when needed.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-chart-column"></i>
+          <h3>Monthly Spending</h3>
+          <p>A chart on the dashboard shows this month's spending so trends are visible at a glance.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-chart-pie"></i>
+          <h3>Category Breakdown</h3>
+          <p>A donut chart splits spending by category, showing which areas take the biggest share.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-wallet"></i>
+          <h3>Total Balance</h3>
+          <p>A balance card with a trend line keeps the current total and its movement in view.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>Search Transactions</h3>
+          <p>Find any entry by name, category, or tag from one search bar.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-file-lines"></i>
+          <h3>Dashboard &amp; Reports</h3>
+          <p>Switch between the dashboard overview and a reports view for a fuller look at the numbers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2><i class="fa-solid fa-circle-info"></i> Project Summary</h2>
+      <ul class="highlight-list">
+        <li><strong>Type:</strong> a web app for managing personal income and expenses.</li>
+        <li><strong>Built with:</strong> React, JavaScript, and CSS.</li>
+        <li><strong>Currency &amp; language:</strong> Indonesian interface with amounts in IDR.</li>
+        <li><strong>Hosting:</strong> deployed on Vercel, with the source code on GitHub.</li>
+      </ul>
     </div>
 
     <div class="project-links">
@@ -114,13 +161,15 @@
     const menuIcon = document.getElementById('menu-icon');
     const nav = document.querySelector('nav');
     if (menuIcon && nav) {
-      menuIcon.onclick = () => nav.classList.toggle('active');
+      const setMenu = (open) => { nav.classList.toggle('active', open); menuIcon.setAttribute('aria-expanded', String(nav.classList.contains('active'))); };
+      menuIcon.onclick = () => setMenu(!nav.classList.contains('active'));
+      menuIcon.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); menuIcon.click(); } });
       nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => nav.classList.remove('active'));
+        link.addEventListener('click', () => setMenu(false));
       });
       document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
-          nav.classList.remove('active');
+          setMenu(false);
         }
       });
     }

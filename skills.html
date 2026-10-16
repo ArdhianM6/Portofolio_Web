@@ -33,11 +33,11 @@
 <body>
     <header>
         <a href="index.html" class="logo">Ardhian</a>
-        <i class="fa-solid fa-bars" id="menu-icon" aria-label="Open menu"></i>
-        <nav>
+        <i class="fa-solid fa-bars" id="menu-icon" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"></i>
+        <nav id="site-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
-            <a href="skills.html" class="active">Skills</a>
+            <a href="skills.html" class="active" aria-current="page">Skills</a>
             <a href="project.html">Projects</a>
             <a href="experience.html">Experience</a>
             <a href="certificate.html">Certificates</a>
@@ -55,7 +55,7 @@
             <div class="skl-stat-divider"></div>
             <div class="skl-stat"><span class="skl-stat-num">4</span><span class="skl-stat-lbl">Categories</span></div>
             <div class="skl-stat-divider"></div>
-            <div class="skl-stat"><span class="skl-stat-num">68%</span><span class="skl-stat-lbl">Average level</span></div>
+            <div class="skl-stat"><span class="skl-stat-num">3</span><span class="skl-stat-lbl">Projects built</span></div>
         </div>
 
         <div class="skl-tabs" data-animate>
@@ -71,8 +71,6 @@
                 <i class="fab fa-html5"></i>
                 <h3>HTML / CSS</h3>
                 <span class="skill-level proficient">Proficient</span>
-                <span class="progress-percent">75%</span>
-                <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
                 <p>Building responsive, well-structured web pages and interfaces.</p>
             </div>
 
@@ -80,8 +78,6 @@
                 <i class="fab fa-js"></i>
                 <h3>JavaScript</h3>
                 <span class="skill-level proficient">Proficient</span>
-                <span class="progress-percent">70%</span>
-                <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
                 <p>Interactive web apps, such as my Movie Search App.</p>
             </div>
 
@@ -89,8 +85,6 @@
                 <i class="fab fa-react"></i>
                 <h3>React.js</h3>
                 <span class="skill-level intermediate">Intermediate</span>
-                <span class="progress-percent">60%</span>
-                <div class="progress-bar"><div class="progress" data-width="60%"></div></div>
                 <p>Component-based front ends, such as my Expense Tracker.</p>
             </div>
 
@@ -98,8 +92,6 @@
                 <i class="fa-solid fa-n"></i>
                 <h3>Next.js</h3>
                 <span class="skill-level intermediate">Intermediate</span>
-                <span class="progress-percent">60%</span>
-                <div class="progress-bar"><div class="progress" data-width="60%"></div></div>
                 <p>Full-stack apps with the App Router and API routes, such as my Marketplace App.</p>
             </div>
 
@@ -107,8 +99,6 @@
                 <i class="fab fa-php"></i>
                 <h3>PHP</h3>
                 <span class="skill-level intermediate">Intermediate</span>
-                <span class="progress-percent">65%</span>
-                <div class="progress-bar"><div class="progress" data-width="65%"></div></div>
                 <p>Used in both of my web internships.</p>
             </div>
 
@@ -116,8 +106,6 @@
                 <i class="fab fa-node-js"></i>
                 <h3>Node.js</h3>
                 <span class="skill-level intermediate">Intermediate</span>
-                <span class="progress-percent">65%</span>
-                <div class="progress-bar"><div class="progress" data-width="65%"></div></div>
                 <p>Server-side development with JavaScript.</p>
             </div>
 
@@ -125,8 +113,6 @@
                 <i class="fab fa-python"></i>
                 <h3>Python</h3>
                 <span class="skill-level advanced">Advanced</span>
-                <span class="progress-percent">80%</span>
-                <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
                 <p>Scripting, programming fundamentals, and problem solving.</p>
             </div>
 
@@ -134,8 +120,6 @@
                 <i class="fas fa-database"></i>
                 <h3>SQL</h3>
                 <span class="skill-level proficient">Proficient</span>
-                <span class="progress-percent">70%</span>
-                <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
                 <p>Writing queries to store, retrieve, and manage data.</p>
             </div>
 
@@ -143,8 +127,6 @@
                 <i class="fas fa-table"></i>
                 <h3>MySQL</h3>
                 <span class="skill-level proficient">Proficient</span>
-                <span class="progress-percent">70%</span>
-                <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
                 <p>Working with relational databases for web applications.</p>
             </div>
 
@@ -152,8 +134,6 @@
                 <i class="fa-solid fa-bolt"></i>
                 <h3>Supabase</h3>
                 <span class="skill-level intermediate">Intermediate</span>
-                <span class="progress-percent">60%</span>
-                <div class="progress-bar"><div class="progress" data-width="60%"></div></div>
                 <p>Auth, PostgreSQL, Row Level Security, and realtime features in my Marketplace App.</p>
             </div>
 
@@ -161,8 +141,6 @@
                 <i class="fab fa-git-alt"></i>
                 <h3>Git</h3>
                 <span class="skill-level intermediate">Intermediate</span>
-                <span class="progress-percent">65%</span>
-                <div class="progress-bar"><div class="progress" data-width="65%"></div></div>
                 <p>Version control and collaboration through GitHub.</p>
             </div>
 
@@ -170,8 +148,6 @@
                 <i class="fab fa-wordpress"></i>
                 <h3>WordPress</h3>
                 <span class="skill-level proficient">Proficient</span>
-                <span class="progress-percent">70%</span>
-                <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
                 <p>Building and managing websites with a CMS.</p>
             </div>
 
@@ -179,8 +155,6 @@
                 <i class="fa-solid fa-wand-magic-sparkles"></i>
                 <h3>Prompt Engineering</h3>
                 <span class="skill-level proficient">Proficient</span>
-                <span class="progress-percent">70%</span>
-                <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
                 <p>Writing clear, effective prompts for AI tools.</p>
             </div>
         </div>
@@ -199,10 +173,12 @@
         const menuIcon = document.getElementById('menu-icon');
         const nav = document.querySelector('nav');
         if (menuIcon) {
-            menuIcon.onclick = () => nav.classList.toggle('active');
-            nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => nav.classList.remove('active')));
+            const setMenu = (open) => { nav.classList.toggle('active', open); menuIcon.setAttribute('aria-expanded', String(nav.classList.contains('active'))); };
+            menuIcon.onclick = () => setMenu(!nav.classList.contains('active'));
+            menuIcon.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); menuIcon.click(); } });
+            nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => setMenu(false)));
             document.addEventListener('click', (e) => {
-                if (!nav.contains(e.target) && !menuIcon.contains(e.target)) nav.classList.remove('active');
+                if (!nav.contains(e.target) && !menuIcon.contains(e.target)) setMenu(false);
             });
         }
         const bars = document.querySelectorAll('[data-animate]');
