@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <meta name="description" content="Details of the Marketplace App, a full-stack e-commerce project built with Next.js, Supabase, and Midtrans.">
+  <meta name="description" content="Responsive Marketplace App built with Next.js, Supabase, PostgreSQL, and Midtrans. Explore customer shopping, voucher checkout, receipts, and admin dashboard screenshots.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
@@ -14,74 +14,121 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
-    /* Galeri screenshot Marketplace App (ringkas, landscape) */
-    .shot-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 900px;
-      margin: 0 auto 12px;
+    .shot-carousel {
+      max-width: 980px;
+      margin: 28px auto 12px;
+      color: #fff;
     }
 
-    .shot {
-      margin: 0;
-      background: #101A2E;
-      border: 1px solid rgba(59, 130, 246, 0.25);
-      border-radius: 12px;
+    .carousel-frame {
       overflow: hidden;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(96, 165, 250, 0.28);
+      border-radius: 16px;
+      background: #07101e;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
     }
 
-    .shot:hover {
-      transform: translateY(-4px);
-      border-color: rgba(59, 130, 246, 0.6);
-      box-shadow: 0 8px 28px rgba(37, 99, 235, 0.28);
+    .carousel-slide[hidden] { display: none; }
+
+    .carousel-image-stage {
+      display: grid;
+      place-items: center;
+      height: clamp(250px, 48vw, 470px);
+      padding: 12px;
+      background: radial-gradient(ellipse at center, #14243c, #07101e 72%);
     }
 
-    .shot img {
+    .carousel-image-stage img {
       display: block;
       width: 100%;
-      height: auto;            /* penting: menimpa atribut height di tag <img> */
-      aspect-ratio: 4 / 3;
-      max-height: 240px;
-      object-fit: cover;
-      object-position: top;
+      height: 100%;
+      object-fit: contain;
       cursor: zoom-in;
     }
 
-    .shot figcaption {
-      padding: 10px 12px;
-      font-size: 0.82rem;
-      color: #93C5FD;
-      text-align: center;
+    .carousel-slide figcaption {
+      padding: 12px 18px 15px;
+      color: #dbeafe;
+      font-size: 0.9rem;
+      text-align: left;
+      border-top: 1px solid rgba(148, 163, 184, 0.14);
+    }
+
+    .carousel-controls {
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      align-items: center;
+      gap: 14px;
+      max-width: 980px;
+      padding: 14px 4px 0;
+    }
+
+    .carousel-arrow {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      border-radius: 50%;
+      background: #101a2e;
+      color: #dbeafe;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .carousel-arrow:hover, .carousel-arrow:focus-visible {
+      background: #1d4f9f;
+      border-color: #60a5fa;
+    }
+
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 9px;
+    }
+
+    .carousel-dot {
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      border: 0;
+      border-radius: 99px;
+      background: #52647d;
+      cursor: pointer;
+      transition: width 0.2s ease, background 0.2s ease;
+    }
+
+    .carousel-dot[aria-current="true"] {
+      width: 26px;
+      background: #60a5fa;
+    }
+
+    .carousel-count {
+      min-width: 44px;
+      color: #94a3b8;
+      font-size: 0.8rem;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
     }
 
     .shot-hint {
-      color: #888;
+      margin: 0 0 28px;
+      color: #94a3b8;
       font-size: 0.8rem;
-      margin: 0 0 30px;
+      text-align: center;
     }
 
-    /* Mobile: geser ke samping, tidak ditumpuk memanjang */
-    @media (max-width: 768px) {
-      .shot-gallery {
-        display: flex;
-        gap: 14px;
-        max-width: 100%;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 10px;
-      }
+    @media (max-width: 600px) {
+      .shot-carousel { margin-top: 22px; }
+      .carousel-frame { border-radius: 12px; }
+      .carousel-image-stage { height: clamp(230px, 68vw, 340px); padding: 8px; }
+      .carousel-slide figcaption { padding: 10px 13px 12px; }
+      .carousel-controls { gap: 9px; padding-top: 10px; }
+      .carousel-arrow { width: 38px; height: 38px; }
+    }
 
-      .shot {
-        flex: 0 0 78%;
-        scroll-snap-align: center;
-      }
-
-      .shot:hover {
-        transform: none;
-      }
+    @media (prefers-reduced-motion: reduce) {
+      .carousel-arrow, .carousel-dot { transition: none; }
     }
   </style>
 
@@ -91,7 +138,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Ardhian Maulana Tanjung">
   <meta property="og:title" content="Marketplace App | Ardhian Maulana Tanjung">
-  <meta property="og:description" content="Details of the Marketplace App, a full-stack e-commerce project built with Next.js, Supabase, and Midtrans.">
+  <meta property="og:description" content="Responsive Marketplace App built with Next.js, Supabase, PostgreSQL, and Midtrans. Explore customer shopping, voucher checkout, receipts, and admin dashboard screenshots.">
   <meta property="og:url" content="https://ardhianm6.github.io/Portofolio_Web/project-detail/project3.html">
   <meta property="og:image" content="https://ardhianm6.github.io/Portofolio_Web/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -99,7 +146,7 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Marketplace App | Ardhian Maulana Tanjung">
-  <meta name="twitter:description" content="Details of the Marketplace App, a full-stack e-commerce project built with Next.js, Supabase, and Midtrans.">
+  <meta name="twitter:description" content="Responsive Marketplace App built with Next.js, Supabase, PostgreSQL, and Midtrans. Explore customer shopping, voucher checkout, receipts, and admin dashboard screenshots.">
   <meta name="twitter:image" content="https://ardhianm6.github.io/Portofolio_Web/og-image.jpg">
 </head>
 
@@ -128,27 +175,44 @@
       <span class="detail-tag">Vercel</span>
     </div>
     <p class="description">
-      A full-stack marketplace built with Next.js and Supabase. Shoppers can sign in with Google, browse discounted
-      and flash-sale products, check out with e-wallet, QRIS, or bank transfer through Midtrans, top up a wallet balance,
-      earn points and redeem vouchers. Admins manage products and categories from a dedicated dashboard.
+      A responsive full-stack marketplace built with Next.js, Supabase, PostgreSQL, and Midtrans. Customers can browse
+      discounted products, choose delivery and payment options, apply vouchers with an instant total calculation, and
+      review an itemized receipt before paying. Admins get a dedicated dashboard to manage products and categories.
     </p>
 
-    <!-- Screenshots -->
-    <div class="shot-gallery">
-      <figure class="shot">
-        <img src="../img/marketplace/home.png" alt="Marketplace App home screen with categories, discounted products and flash sales" class="zoomable" width="886" height="895" loading="lazy" decoding="async">
-        <figcaption>Home &amp; flash sales</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="../img/marketplace/checkout.png" alt="Marketplace App cart with delivery options and payment methods" class="zoomable" width="889" height="891" loading="lazy" decoding="async">
-        <figcaption>Cart, delivery &amp; payment</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="../img/marketplace/account.png" alt="Marketplace App account page with wallet balance and points" class="zoomable" width="858" height="889" loading="lazy" decoding="async">
-        <figcaption>Account, balance &amp; points</figcaption>
-      </figure>
-    </div>
-    <p class="shot-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Click a screenshot to see the full screen.</p>
+    <!-- Screenshots: one focused slide keeps the detail page compact. -->
+    <section class="shot-carousel" id="marketplace-carousel" aria-label="Marketplace App screenshots">
+      <div class="carousel-frame" aria-live="off">
+        <figure class="carousel-slide" data-caption="Customer storefront">
+          <div class="carousel-image-stage"><img src="../img/marketplace/customer.png" alt="Marketplace App customer storefront with offers and product catalog" class="zoomable" width="1020" height="600" loading="eager" decoding="async"></div>
+          <figcaption>Customer storefront</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-caption="Customer sign in" hidden>
+          <div class="carousel-image-stage"><img src="../img/marketplace/login.png" alt="Marketplace App modern customer login screen" class="zoomable" width="1020" height="730" loading="lazy" decoding="async"></div>
+          <figcaption>Customer sign in</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-caption="Account registration" hidden>
+          <div class="carousel-image-stage"><img src="../img/marketplace/register.png" alt="Marketplace App two-step account registration screen" class="zoomable" width="1020" height="730" loading="lazy" decoding="async"></div>
+          <figcaption>Account registration</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-caption="Admin dashboard" hidden>
+          <div class="carousel-image-stage"><img src="../img/marketplace/admin.png" alt="Marketplace App admin dashboard for managing products and categories" class="zoomable" width="1897" height="893" loading="lazy" decoding="async"></div>
+          <figcaption>Admin dashboard</figcaption>
+        </figure>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous screenshot"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+        <div class="carousel-indicators" role="group" aria-label="Choose screenshot">
+          <button class="carousel-dot" type="button" data-carousel-to="0" aria-label="Show customer storefront" aria-current="true"></button>
+          <button class="carousel-dot" type="button" data-carousel-to="1" aria-label="Show customer sign in" aria-current="false"></button>
+          <button class="carousel-dot" type="button" data-carousel-to="2" aria-label="Show account registration" aria-current="false"></button>
+          <button class="carousel-dot" type="button" data-carousel-to="3" aria-label="Show admin dashboard" aria-current="false"></button>
+        </div>
+        <span class="carousel-count" data-carousel-count aria-live="off">1 / 4</span>
+        <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next screenshot"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+      </div>
+    </section>
+    <p class="shot-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Screenshots change every 6 seconds. Use the arrows or dots to browse, or select an image to enlarge.</p>
 
     <div class="detail-notes">
       <span class="detail-note"><i class="fa-solid fa-circle-info"></i> Payments run in Midtrans Sandbox, so transactions are simulated and no real money is used.</span>
@@ -237,6 +301,46 @@
     window.addEventListener("load", () => {
       document.body.classList.add("loaded");
     });
+  </script>
+
+  <script>
+    // Screenshot carousel: auto-advance gently, pause for interaction and reduced motion.
+    (() => {
+      const root = document.getElementById("marketplace-carousel");
+      if (!root) return;
+      const slides = [...root.querySelectorAll(".carousel-slide")];
+      const dots = [...root.querySelectorAll("[data-carousel-to]")];
+      const count = root.querySelector("[data-carousel-count]");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let active = 0;
+      let timer;
+      const show = (index) => {
+        active = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => { slide.hidden = i !== active; });
+        dots.forEach((dot, i) => dot.setAttribute("aria-current", String(i === active)));
+        count.textContent = `${active + 1} / ${slides.length}`;
+      };
+      const stop = () => window.clearInterval(timer);
+      const start = () => {
+        stop();
+        if (!reducedMotion.matches && !root.matches(":hover") && !root.contains(document.activeElement)) {
+          timer = window.setInterval(() => show(active + 1), 6000);
+        }
+      };
+      root.querySelector("[data-carousel-prev]").addEventListener("click", () => { show(active - 1); start(); });
+      root.querySelector("[data-carousel-next]").addEventListener("click", () => { show(active + 1); start(); });
+      dots.forEach((dot, i) => dot.addEventListener("click", () => { show(i); start(); }));
+      root.addEventListener("pointerenter", stop);
+      root.addEventListener("pointerleave", start);
+      root.addEventListener("focusin", stop);
+      root.addEventListener("focusout", (event) => { if (!root.contains(event.relatedTarget)) start(); });
+      root.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") { show(active - 1); start(); }
+        if (event.key === "ArrowRight") { show(active + 1); start(); }
+      });
+      reducedMotion.addEventListener?.("change", start);
+      start();
+    })();
   </script>
 
   <script>
