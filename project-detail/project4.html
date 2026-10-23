@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta name="description" content="Ruang Saji is a responsive Laravel table reservation app with live availability, reservation lookup, staff operations, waitlists, and optional meal pre-orders.">
+  <meta name="author" content="Ardhian Maulana Tanjung">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+  <title>Ruang Saji | Ardhian Maulana Tanjung</title>
+  <link rel="canonical" href="https://ardhianm6.github.io/Portofolio_Web/project-detail/project4.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ardhian Maulana Tanjung">
+  <meta property="og:title" content="Ruang Saji | Ardhian Maulana Tanjung">
+  <meta property="og:description" content="A responsive Laravel reservation app for restaurant customers and staff.">
+  <meta property="og:url" content="https://ardhianm6.github.io/Portofolio_Web/project-detail/project4.html">
+  <meta property="og:image" content="https://ardhianm6.github.io/Portofolio_Web/img/ruang-saji/booking.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ruang Saji | Ardhian Maulana Tanjung">
+  <meta name="twitter:description" content="A responsive Laravel reservation app for restaurant customers and staff.">
+  <meta name="twitter:image" content="https://ardhianm6.github.io/Portofolio_Web/img/ruang-saji/booking.png">
+  <style>
+    .ruang-saji-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .ruang-saji-gallery figure { margin: 0; overflow: hidden; border: 1px solid rgba(96, 165, 250, 0.25); border-radius: 12px; background: #07101e; }
+    .ruang-saji-gallery img { display: block; width: 100%; height: auto; aspect-ratio: 1.44; object-fit: cover; animation: none; }
+    .ruang-saji-gallery figcaption { padding: 10px 13px; color: #dbeafe; font-size: 0.85rem; text-align: left; }
+    .demo-notice { margin: 0 auto 30px; max-width: 780px; padding: 14px 18px; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; color: #cbd5e1; background: rgba(56, 189, 248, 0.08); line-height: 1.6; }
+    @media (max-width: 600px) { .ruang-saji-gallery { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo">Ardhian</a>
+    <i class="fa-solid fa-bars" id="menu-icon" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"></i>
+    <nav id="site-nav">
+      <a href="../index.html">Home</a><a href="../about.html">About Me</a><a href="../skills.html">Skills</a>
+      <a href="../project.html" class="active" aria-current="page">Projects</a><a href="../experience.html">Experience</a><a href="../certificate.html">Certificates</a>
+    </nav>
+  </header>
+  <section class="project-detail">
+    <h1>Ruang Saji</h1>
+    <div class="detail-tags"><span class="detail-tag">Laravel 13</span><span class="detail-tag">PHP 8.3</span><span class="detail-tag">PostgreSQL</span><span class="detail-tag">Blade</span><span class="detail-tag">JavaScript</span><span class="detail-tag">Docker</span></div>
+    <p class="description">A responsive table reservation app for local cafes and restaurants. Guests can check availability, reserve a table, optionally choose meals ahead of time, and retrieve their booking without creating an account. Staff can coordinate arrivals, tables, waitlists, and kitchen preparation.</p>
+    <div class="image-gallery ruang-saji-gallery" aria-label="Ruang Saji application screenshots">
+      <figure><img src="../img/ruang-saji/booking.png" alt="Customer reservation page with table availability and arrival time slots" width="1440" height="1000" loading="eager" decoding="async"><figcaption>Reservation search and available arrival times</figcaption></figure>
+      <figure><img src="../img/ruang-saji/reservation-lookup.png" alt="Reservation lookup page asking for the phone number and reservation code" width="1440" height="1000" loading="lazy" decoding="async"><figcaption>Find a reservation using its phone number and code</figcaption></figure>
+      <figure><img src="../img/ruang-saji/staff-login.png" alt="Staff sign-in page for the restaurant operations panel" width="1440" height="1000" loading="lazy" decoding="async"><figcaption>Staff sign-in for restaurant operations</figcaption></figure>
+    </div>
+    <p class="demo-notice"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Public portfolio demo. Use fictional contact details. Payments are simulated and no real reservation or payment is processed.</p>
+    <div class="detail-section">
+      <h2><i class="fa-solid fa-list-check" aria-hidden="true"></i> Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><h3>Table availability</h3><p>Guests select party size, date, and arrival time. The app checks capacity and prevents overlapping reservations.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-ticket" aria-hidden="true"></i><h3>Reservation ticket</h3><p>Each completed booking receives a confirmation code guests can show to staff or use to look up the reservation later.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-utensils" aria-hidden="true"></i><h3>Optional meal pre-order</h3><p>Guests can skip the menu or choose dishes ahead. Kitchen preparation follows the serving time and check-in flow.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-people-arrows-left-right" aria-hidden="true"></i><h3>Staff operations</h3><p>Staff can check in guests, manage waitlists, update delays, and mark tables available only after cleaning is confirmed.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-sliders" aria-hidden="true"></i><h3>Restaurant settings</h3><p>Owners can configure opening hours, table capacity, estimated visit duration, cleaning buffer, and deposit policy.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i><h3>Responsive experience</h3><p>The booking flow and staff entry points are designed for phones as well as desktop screens.</p></div>
+      </div>
+    </div>
+    <div class="detail-section">
+      <h2><i class="fa-solid fa-gears" aria-hidden="true"></i> Technical Highlights</h2>
+      <ul class="highlight-list">
+        <li><strong>Reservation conflicts:</strong> availability is checked against table capacity and overlapping reservation windows.</li>
+        <li><strong>Guest lookup:</strong> reservations can be retrieved with the booking phone number and confirmation code, without a customer account.</li>
+        <li><strong>Table lifecycle:</strong> estimated duration helps plan capacity; a table becomes available only after the guest leaves and staff confirms cleaning.</li>
+        <li><strong>Kitchen timing:</strong> pre-ordered dishes are held until the serving schedule or guest check-in so food is not prepared too early.</li>
+        <li><strong>Deployment:</strong> Docker image deployed to Hostless with PostgreSQL and environment-based secrets.</li>
+      </ul>
+    </div>
+    <div class="project-links">
+      <a href="https://ruang-saji-demo.hostless.app" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Open Live Demo</a>
+      <a href="https://github.com/ArdhianM6/ruang-saji-reservasi" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-brands fa-github" aria-hidden="true"></i> View Repository</a>
+      <a href="../project.html" class="btn back-btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
+    </div>
+  </section>
+  <script>
+    window.addEventListener("load", () => document.body.classList.add("loaded"));
+  </script>
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const nav = document.getElementById('site-nav');
+    if (menuIcon && nav) {
+      const setMenu = (open) => { nav.classList.toggle('active', open); menuIcon.setAttribute('aria-expanded', String(nav.classList.contains('active'))); };
+      menuIcon.addEventListener('click', () => setMenu(!nav.classList.contains('active')));
+      menuIcon.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); menuIcon.click(); } });
+      nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+    }
+  </script>
+</body>
+</html>

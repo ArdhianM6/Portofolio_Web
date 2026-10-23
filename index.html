@@ -41,7 +41,7 @@
         .feat-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #93C5FD; background: rgba(59,130,246,.12); border: 1px solid rgba(59,130,246,.3); padding: 6px 14px; border-radius: 30px; }
         .featured-head h2 { font-size: 2.4rem; margin: 14px 0 8px; }
         .featured-head p { color: #cbd5e1; max-width: 560px; margin: 0 auto; }
-        .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; text-align: left; }
+        .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 36px; text-align: left; }
         .feat-card { display: flex; flex-direction: column; background: #101A2E; border: 1px solid rgba(59,130,246,.3); border-radius: 15px; overflow: hidden; text-decoration: none; color: #fff; transition: opacity .8s ease-out, transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
         .feat-card:hover { transform: translateY(-8px); box-shadow: 0 14px 35px rgba(59,130,246,.35); border-color: rgba(59,130,246,.7); }
         .feat-thumb { height: 180px; overflow: hidden; background: #0B1220; }
@@ -144,6 +144,17 @@
         </div>
 
         <div class="feat-grid">
+            <a href="project-detail/project4.html" class="feat-card" data-animate>
+                <div class="feat-thumb">
+                    <img src="img/ruang-saji/booking.png" alt="Ruang Saji customer page for choosing a reservation date and available table time" width="1440" height="1000" loading="lazy" decoding="async" style="object-position: top;">
+                </div>
+                <div class="feat-body">
+                    <h3>Ruang Saji</h3>
+                    <div class="feat-tags"><span class="feat-tag">Laravel</span><span class="feat-tag">PHP</span><span class="feat-tag">PostgreSQL</span></div>
+                    <p>A table reservation app with availability, optional meal pre-orders, reservation tickets, and staff operations.</p>
+                    <span class="feat-link">View details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
             <a href="project-detail/project3.html" class="feat-card" data-animate>
                 <div class="feat-thumb">
                     <img src="img/marketplace/home.png" alt="Marketplace App home screen" width="886" height="895" loading="lazy" decoding="async" style="object-position: top;">
