@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0B1220">
     <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="description" content="Skills of Ardhian Maulana Tanjung: HTML/CSS, JavaScript, React.js, Next.js, PHP, Node.js, Python, SQL, MySQL, Supabase, and Git.">
+    <meta name="description" content="Web development skills of Ardhian Maulana Tanjung, including Laravel, PostgreSQL, Docker, Next.js, Supabase, and payment integrations.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .skill-level.project-experience { background: rgba(56,189,248,.1); color: #7DD3FC; border: 1px solid rgba(56,189,248,.32); }
+        .skill:focus-within { border-color: rgba(59,130,246,.6); }
+        @media (prefers-reduced-motion: reduce) { .skill, .skill::before, .skill::after, .skill i { transition: none; } }
+    </style>
     <title>Skills | Ardhian Maulana Tanjung</title>
 
     <!-- SEO & Social preview -->
@@ -19,7 +24,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Ardhian Maulana Tanjung">
     <meta property="og:title" content="Skills | Ardhian Maulana Tanjung">
-    <meta property="og:description" content="Skills of Ardhian Maulana Tanjung: HTML/CSS, JavaScript, React.js, Next.js, PHP, Node.js, Python, SQL, MySQL, Supabase, and Git.">
+    <meta property="og:description" content="Web development skills of Ardhian Maulana Tanjung, including Laravel, PostgreSQL, Docker, Next.js, Supabase, and payment integrations.">
     <meta property="og:url" content="https://ardhianm6.github.io/Portofolio_Web/skills.html">
     <meta property="og:image" content="https://ardhianm6.github.io/Portofolio_Web/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -27,7 +32,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Skills | Ardhian Maulana Tanjung">
-    <meta name="twitter:description" content="Skills of Ardhian Maulana Tanjung: HTML/CSS, JavaScript, React.js, Next.js, PHP, Node.js, Python, SQL, MySQL, Supabase, and Git.">
+    <meta name="twitter:description" content="Web development skills of Ardhian Maulana Tanjung, including Laravel, PostgreSQL, Docker, Next.js, Supabase, and payment integrations.">
     <meta name="twitter:image" content="https://ardhianm6.github.io/Portofolio_Web/og-image.jpg">
 </head>
 <body>
@@ -51,11 +56,11 @@
         </div>
 
         <div class="skl-stats" data-animate>
-            <div class="skl-stat"><span class="skl-stat-num">13</span><span class="skl-stat-lbl">Skills</span></div>
+            <div class="skl-stat"><span class="skl-stat-num">19</span><span class="skl-stat-lbl">Skills</span></div>
             <div class="skl-stat-divider"></div>
             <div class="skl-stat"><span class="skl-stat-num">4</span><span class="skl-stat-lbl">Categories</span></div>
             <div class="skl-stat-divider"></div>
-            <div class="skl-stat"><span class="skl-stat-num">3</span><span class="skl-stat-lbl">Projects built</span></div>
+            <div class="skl-stat"><span class="skl-stat-num">4</span><span class="skl-stat-lbl">Projects built</span></div>
         </div>
 
         <div class="skl-tabs" data-animate>
@@ -95,11 +100,32 @@
                 <p>Full-stack apps with the App Router and API routes, such as my Marketplace App.</p>
             </div>
 
+            <div class="skill" data-animate data-category="frontend">
+                <i class="fa-solid fa-file-code"></i>
+                <h3>Blade</h3>
+                <span class="skill-level project-experience">Project experience</span>
+                <p>Server-rendered views for customer booking and restaurant staff pages in Ruang Saji.</p>
+            </div>
+
             <div class="skill" data-animate data-category="backend">
                 <i class="fab fa-php"></i>
                 <h3>PHP</h3>
                 <span class="skill-level intermediate">Intermediate</span>
                 <p>Used in both of my web internships.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="backend">
+                <i class="fa-brands fa-laravel"></i>
+                <h3>Laravel</h3>
+                <span class="skill-level project-experience">Project experience</span>
+                <p>Built reservation, guest lookup, and staff workflows for Ruang Saji.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="backend">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Webhooks</h3>
+                <span class="skill-level project-experience">Project experience</span>
+                <p>Verified payment notifications before updating order status in Marketplace App.</p>
             </div>
 
             <div class="skill" data-animate data-category="backend">
@@ -131,6 +157,13 @@
             </div>
 
             <div class="skill" data-animate data-category="database">
+                <i class="fa-solid fa-database"></i>
+                <h3>PostgreSQL</h3>
+                <span class="skill-level project-experience">Project experience</span>
+                <p>Used for relational data in Ruang Saji and through Supabase in Marketplace App.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="database">
                 <i class="fa-solid fa-bolt"></i>
                 <h3>Supabase</h3>
                 <span class="skill-level intermediate">Intermediate</span>
@@ -142,6 +175,20 @@
                 <h3>Git</h3>
                 <span class="skill-level intermediate">Intermediate</span>
                 <p>Version control and collaboration through GitHub.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="tools">
+                <i class="fa-brands fa-docker"></i>
+                <h3>Docker</h3>
+                <span class="skill-level project-experience">Project experience</span>
+                <p>Packaged and deployed the Ruang Saji application as a container.</p>
+            </div>
+
+            <div class="skill" data-animate data-category="tools">
+                <i class="fa-solid fa-credit-card"></i>
+                <h3>Midtrans</h3>
+                <span class="skill-level project-experience">Project experience</span>
+                <p>Integrated sandbox checkout and payment methods in Marketplace App.</p>
             </div>
 
             <div class="skill" data-animate data-category="tools">
