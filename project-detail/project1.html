@@ -1,205 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <meta name="description" content="Details of the Movie Search App, built with JavaScript and a movie API.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-  <title>Movie Search App | Ardhian Maulana Tanjung</title>
-  <link rel="stylesheet" href="../css/project-detail.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- SEO & Social preview -->
+  <meta name="theme-color" content="#0b1110">
+  <meta name="description" content="Screen Search is a responsive React movie discovery app with search, watchlists, personal reviews, and legal streaming links.">
   <meta name="author" content="Ardhian Maulana Tanjung">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+  <title>Screen Search | Ardhian Maulana Tanjung</title>
   <link rel="canonical" href="https://ardhianm6.github.io/Portofolio_Web/project-detail/project1.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Ardhian Maulana Tanjung">
-  <meta property="og:title" content="Movie Search App | Ardhian Maulana Tanjung">
-  <meta property="og:description" content="Details of the Movie Search App, built with JavaScript and a movie API.">
+  <meta property="og:title" content="Screen Search | Ardhian Maulana Tanjung">
+  <meta property="og:description" content="A React movie discovery experience with searchable titles, watchlists, personal reviews, and legal streaming links.">
   <meta property="og:url" content="https://ardhianm6.github.io/Portofolio_Web/project-detail/project1.html">
-  <meta property="og:image" content="https://ardhianm6.github.io/Portofolio_Web/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://ardhianm6.github.io/Portofolio_Web/img/movie-search-home.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Movie Search App | Ardhian Maulana Tanjung">
-  <meta name="twitter:description" content="Details of the Movie Search App, built with JavaScript and a movie API.">
-  <meta name="twitter:image" content="https://ardhianm6.github.io/Portofolio_Web/og-image.jpg">
+  <meta name="twitter:title" content="Screen Search | Ardhian Maulana Tanjung">
+  <meta name="twitter:description" content="A React movie discovery experience with searchable titles, watchlists, personal reviews, and legal streaming links.">
+  <meta name="twitter:image" content="https://ardhianm6.github.io/Portofolio_Web/img/movie-search-home.png">
+  <style>
+    .movie-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .movie-gallery figure { margin:0; overflow:hidden; border:1px solid rgba(197,243,106,.2); border-radius:10px; background:#111713; }
+    .movie-gallery figure:first-child { grid-column:1/-1; }
+    .movie-gallery img { display:block; width:100%; height:auto; aspect-ratio:1.55; object-fit:cover; cursor:zoom-in; }
+    .movie-gallery figure:first-child img { aspect-ratio:1.78; object-position:top; }
+    .movie-gallery figcaption { padding:11px 14px; color:#d1d9d1; font-size:.84rem; }
+    .demo-notice { margin:0 auto 28px; max-width:820px; padding:13px 17px; border:1px solid rgba(197,243,106,.25); border-radius:8px; color:#d6ddcf; background:rgba(197,243,106,.06); line-height:1.6; }
+    @media(max-width:600px){.movie-gallery{grid-template-columns:1fr}.movie-gallery figure:first-child{grid-column:auto}}
+  </style>
 </head>
-
 <body>
   <header>
     <a href="../index.html" class="logo">Ardhian</a>
     <i class="fa-solid fa-bars" id="menu-icon" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"></i>
     <nav id="site-nav">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About Me</a>
-      <a href="../skills.html">Skills</a>
-      <a href="../project.html" class="active" aria-current="page">Projects</a>
-      <a href="../experience.html">Experience</a>
-      <a href="../certificate.html">Certificates</a>
+      <a href="../index.html">Home</a><a href="../about.html">About Me</a><a href="../skills.html">Skills</a>
+      <a href="../project.html" class="active" aria-current="page">Projects</a><a href="../experience.html">Experience</a><a href="../certificate.html">Certificates</a>
     </nav>
   </header>
-
   <section class="project-detail">
-    <h1>Movie Search App</h1>
-    <div class="detail-tags">
-      <span class="detail-tag">JavaScript</span>
-      <span class="detail-tag">API</span>
-    </div>
-    <p class="description">
-      A JavaScript movie search app that uses a movie API to show the title, poster, rating, and synopsis
-      of each result based on what the user searches for. Beyond searching, it lets users browse trending titles,
-      explore movies by region, filter and sort the results, and keep a list of favorites.
-    </p>
+    <h1>Screen Search</h1>
+    <div class="detail-tags"><span class="detail-tag">React 19</span><span class="detail-tag">Vite</span><span class="detail-tag">JavaScript</span><span class="detail-tag">OMDb API</span><span class="detail-tag">CSS</span></div>
+    <p class="description">A responsive movie discovery app for exploring films, series, and anime. Search results open into shareable detail pages with ratings, cast and crew, personal viewing notes, and links to check legal streaming availability.</p>
 
-    <!-- Gambar Project -->
-    <div class="image-gallery single">
-      <img src="../img/movie-search1.webp" alt="Main screen of the Movie Search App" class="zoomable" width="1600" height="740" decoding="async">
+    <div class="image-gallery movie-gallery" aria-label="Screen Search application screenshots">
+      <figure><img src="../img/movie-search-home.png" alt="Screen Search homepage with editorial hero, category filters, and movie poster grid" width="1440" height="1100" decoding="async"><figcaption>Discovery home with curated titles and category browsing</figcaption></figure>
+      <figure><img src="../img/movie-search-results.png" alt="Screen Search movie search results with sorting and pagination controls" width="1440" height="1000" loading="lazy" decoding="async"><figcaption>Search results with filters, sorting, and load-more pagination</figcaption></figure>
+      <figure><img src="../img/movie-search-detail.png" alt="Screen Search title detail page with synopsis, credits, personal review, and legal streaming links" width="1440" height="1100" loading="lazy" decoding="async"><figcaption>Shareable movie detail with credits and legal provider discovery</figcaption></figure>
     </div>
+
+    <p class="demo-notice"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> The app provides movie information and links to official viewing options. It does not host or stream copyrighted films.</p>
 
     <div class="detail-section">
-      <h2><i class="fa-solid fa-list-check"></i> Key Features</h2>
+      <h2><i class="fa-solid fa-list-check" aria-hidden="true"></i> Key Features</h2>
       <div class="feature-grid">
-        <div class="feature-card">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <h3>Movie Search</h3>
-          <p>Type a title and get matching results with poster, title, and rating shown on each card.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-fire"></i>
-          <h3>Trending Now</h3>
-          <p>The home page highlights currently trending titles, so there is something to explore before searching.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-globe"></i>
-          <h3>Browse by Region</h3>
-          <p>Separate views for Indonesian, English, Japanese, and Korean titles, plus a dedicated Anime section.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-filter"></i>
-          <h3>Filter &amp; Sort</h3>
-          <p>Narrow results by type and change the sort order to find what you want faster.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-heart"></i>
-          <h3>Favorites</h3>
-          <p>Tap the heart on any movie to save it, and open the Favorites page to see your saved list.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-star"></i>
-          <h3>Ratings at a Glance</h3>
-          <p>Each poster carries its rating badge, so you can compare movies without opening them.</p>
-        </div>
+        <div class="feature-card"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><h3>Movie discovery</h3><p>Search titles and browse curated, regional, and anime collections with clear loading and error states.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-arrow-up-wide-short" aria-hidden="true"></i><h3>Search controls</h3><p>Filter by media type, sort results, and load additional result pages as needed.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><h3>Shareable details</h3><p>Each title has a direct URL with synopsis, IMDb rating, genre, runtime, director, and cast.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-bookmark" aria-hidden="true"></i><h3>Personal collections</h3><p>Save favorites and watchlist titles, mark films watched, and keep recent searches locally.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i><h3>Private viewing notes</h3><p>Write a personal review for each title; notes stay in the current browser.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-ticket" aria-hidden="true"></i><h3>Legal viewing links</h3><p>Find official streaming availability and trailers through external provider search links.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i><h3>Responsive and accessible</h3><p>Keyboard focus, meaningful labels, reduced-motion support, and layouts tuned for phones and desktop.</p></div>
       </div>
     </div>
 
     <div class="detail-section">
-      <h2><i class="fa-solid fa-circle-info"></i> Project Summary</h2>
+      <h2><i class="fa-solid fa-gears" aria-hidden="true"></i> Technical Highlights</h2>
       <ul class="highlight-list">
-        <li><strong>Type:</strong> a web app that fetches live movie data from an external API.</li>
-        <li><strong>Built with:</strong> JavaScript, with movie data loaded from an API.</li>
-        <li><strong>Interface language:</strong> Indonesian.</li>
-        <li><strong>Hosting:</strong> deployed on Vercel, with the source code on GitHub.</li>
+        <li><strong>API integration:</strong> OMDb search pagination and on-demand title details reduce unnecessary detail requests.</li>
+        <li><strong>Client-side routing:</strong> movie pages use direct IMDb-based URLs and support browser navigation.</li>
+        <li><strong>State and persistence:</strong> favorites, watchlists, watched IDs, search history, and personal notes use browser storage with guarded parsing.</li>
+        <li><strong>Resilience:</strong> requests handle stale responses, missing API configuration, API errors, and unavailable posters.</li>
+        <li><strong>Stack:</strong> React 19, Vite, JavaScript, CSS, and OMDb API.</li>
       </ul>
     </div>
 
     <div class="project-links">
-      <a href="https://movie-search-teal.vercel.app/" target="_blank" class="btn">
-        <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Website
-      </a>
-      <a href="https://github.com/ArdhianM6/movie-search" target="_blank" class="btn">
-        <i class="fa-brands fa-github"></i> View Repository
-      </a>
-      <a href="../project.html" class="btn back-btn">← Back to Projects</a>
+      <a href="https://movie-search-teal.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Open Live Demo</a>
+      <a href="https://github.com/ArdhianM6/movie-search" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-brands fa-github" aria-hidden="true"></i> View Repository</a>
+      <a href="../project.html" class="btn back-btn"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects</a>
     </div>
   </section>
 
-  <!-- Lightbox (Zoom Overlay) -->
-  <div id="lightbox">
-    <img id="lightbox-img" src="" alt="Zoomed Image">
-  </div>
-
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview"><img id="lightbox-img" src="" alt="Enlarged application screenshot"></div>
   <script>
-    // Menambahkan class loaded untuk animasi masuk
-    window.addEventListener("load", () => {
-      document.body.classList.add("loaded");
-    });
-
-    // Lightbox Zoom Logic
-    const zoomableImages = document.querySelectorAll(".zoomable");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-
-    zoomableImages.forEach(img => {
-      img.addEventListener("click", () => {
-        lightboxImg.src = img.src;
-        lightbox.classList.add("active");
-      });
-    });
-
-    // Tutup lightbox jika diklik area luar gambar
-    lightbox.addEventListener("click", (e) => {
-      if (e.target !== lightboxImg) {
-        lightbox.classList.remove("active");
-      }
-    });
-
-    // Zoom in / out menggunakan scroll
-    let scale = 1;
-    lightboxImg.addEventListener("wheel", (e) => {
-      e.preventDefault();
-      scale += e.deltaY * -0.001;
-      scale = Math.min(Math.max(1, scale), 3); // Batas zoom 1x - 3x
-      lightboxImg.style.transform = `scale(${scale})`;
-    });
-  </script>
-
-  <script>
-    // === Toggle Navbar (Mobile) ===
+    window.addEventListener('load', () => document.body.classList.add('loaded'));
     const menuIcon = document.getElementById('menu-icon');
-    const nav = document.querySelector('nav');
+    const nav = document.getElementById('site-nav');
     if (menuIcon && nav) {
       const setMenu = (open) => { nav.classList.toggle('active', open); menuIcon.setAttribute('aria-expanded', String(nav.classList.contains('active'))); };
-      menuIcon.onclick = () => setMenu(!nav.classList.contains('active'));
-      menuIcon.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); menuIcon.click(); } });
-
-      // Tutup menu saat salah satu link diklik
-      nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => setMenu(false));
-      });
-
-      // Tutup menu saat klik di luar area nav/menu-icon
-      document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
-          setMenu(false);
-        }
-      });
+      menuIcon.addEventListener('click', () => setMenu(!nav.classList.contains('active')));
+      menuIcon.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); menuIcon.click(); } });
+      nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
     }
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-img');
+    document.querySelectorAll('.movie-gallery img').forEach((image) => image.addEventListener('click', () => { lightboxImage.src = image.src; lightbox.classList.add('active'); }));
+    lightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') lightbox.classList.remove('active'); });
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollTopBtn) { window.addEventListener('scroll', () => scrollTopBtn.classList.toggle('show', window.scrollY > 300)); scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' })); }
   </script>
-
-    <!-- ===== SCROLL TO TOP ===== -->
-    <button id="scrollTopBtn" aria-label="Back to top" title="Back to top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-    <script>
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('show');
-            } else {
-                scrollTopBtn.classList.remove('show');
-            }
-        });
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-
+  <button id="scrollTopBtn" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
 </body>
-
 </html>
