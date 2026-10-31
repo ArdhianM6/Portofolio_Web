@@ -70,10 +70,10 @@
     <div class="cert-grid" id="certGrid">
       <div class="cert-card" data-category="etc" data-animate>
         <div class="cert-card-inner">
-          <a class="cert-thumb" href="img/sertifikat/cert-toefl.pdf" target="_blank" rel="noopener" aria-label="Open TOEFL Prediction certificate PDF">
+          <div class="cert-thumb" onclick="openLightbox('img/sertifikat/cert-toefl.webp', 'TOEFL Prediction - ETC English Tutorial Centre')">
             <img src="img/sertifikat/cert-toefl.webp" alt="TOEFL Prediction certificate from ETC English Tutorial Centre, total score 513" loading="lazy">
-            <div class="cert-thumb-overlay"><i class="fa-solid fa-file-pdf"></i></div>
-          </a>
+            <div class="cert-thumb-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
           <div class="cert-badge etc-badge"><i class="fa-solid fa-language"></i> ETC English Tutorial Centre</div>
           <h3>TOEFL Prediction</h3>
           <div class="cert-meta">
@@ -81,25 +81,10 @@
             <span><i class="fa-solid fa-star"></i> Total score: 513</span>
           </div>
           <div class="cert-valid"><i class="fa-solid fa-shield-check"></i> Valid until 7 May 2027</div>
-          <a class="cert-view-btn" href="img/sertifikat/cert-toefl.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> View PDF certificate</a>
+          <button class="cert-view-btn" onclick="openLightbox('img/sertifikat/cert-toefl.webp', 'TOEFL Prediction - ETC English Tutorial Centre')"><i class="fa-solid fa-eye"></i> View certificate</button>
+          <a class="cert-pdf-link" href="img/sertifikat/cert-toefl.pdf" target="_blank" rel="noopener">Open original PDF</a>
         </div>
         <div class="cert-glow etc-glow"></div>
-      </div>
-
-      <div class="cert-card" data-category="gunadarma" data-animate>
-        <div class="cert-card-inner">
-          <a class="cert-thumb" href="img/sertifikat/cert-golang-gunadarma.pdf" target="_blank" rel="noopener" aria-label="Open Golang certificate from Universitas Gunadarma">
-            <img src="img/sertifikat/cert-golang-gunadarma.webp" alt="Golang certificate from Universitas Gunadarma" loading="lazy">
-            <div class="cert-thumb-overlay"><i class="fa-solid fa-file-pdf"></i></div>
-          </a>
-          <div class="cert-badge gunadarma-badge"><i class="fa-solid fa-graduation-cap"></i> Universitas Gunadarma</div>
-          <h3>Golang Programming</h3>
-          <div class="cert-meta">
-            <span><i class="fa-regular fa-calendar"></i> 20 February 2025</span>
-          </div>
-          <a class="cert-view-btn" href="img/sertifikat/cert-golang-gunadarma.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> View PDF certificate</a>
-        </div>
-        <div class="cert-glow gunadarma-glow"></div>
       </div>
 
       <div class="cert-card" data-category="huawei" data-animate>
@@ -237,6 +222,25 @@
           <button class="cert-view-btn" onclick="openLightbox('img/sertifikat/cert-dasar-ai.webp', 'Belajar Dasar AI (Learn AI Fundamentals) — Dicoding Academy')"><i class="fa-solid fa-eye"></i> View certificate</button>
         </div>
         <div class="cert-glow dicoding-glow"></div>
+      </div>
+
+      <div class="cert-card" data-category="gunadarma" data-animate>
+        <div class="cert-card-inner">
+          <div class="cert-thumb" onclick="openLightbox('img/sertifikat/cert-golang-gunadarma.webp', 'Intermediate Go Programming Training - Universitas Gunadarma')">
+            <img src="img/sertifikat/cert-golang-gunadarma.webp" alt="Intermediate Go programming training certificate from Universitas Gunadarma" loading="lazy">
+            <div class="cert-thumb-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="cert-badge gunadarma-badge"><i class="fa-solid fa-graduation-cap"></i> Universitas Gunadarma</div>
+          <h3>Pemrograman Go Tingkat Menengah</h3>
+          <div class="cert-meta">
+            <span><i class="fa-regular fa-calendar"></i> February 2025</span>
+            <span><i class="fa-solid fa-hashtag"></i> Certificate No. 362666</span>
+          </div>
+          <p class="cert-description">Topics: test-driven development and unit testing; functions and methods; SQL and HTTP requests in Go; Polymer data binding, observer and compute; layout styling; and deployment.</p>
+          <button class="cert-view-btn" onclick="openLightbox('img/sertifikat/cert-golang-gunadarma.webp', 'Intermediate Go Programming Training - Universitas Gunadarma')"><i class="fa-solid fa-eye"></i> View certificate</button>
+          <a class="cert-pdf-link" href="img/sertifikat/cert-golang-gunadarma.pdf" target="_blank" rel="noopener">Open original PDF (2 pages)</a>
+        </div>
+        <div class="cert-glow gunadarma-glow"></div>
       </div>
 
     </div>

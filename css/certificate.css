@@ -325,6 +325,22 @@
   box-shadow: 0 8px 28px rgba(37, 99, 235, 0.28);
 }
 
+.cert-description {
+  color: #aaa;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.cert-pdf-link {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  width: fit-content;
+}
+
+.cert-pdf-link:hover { color: #fff; }
+
 /* --- LIGHTBOX --- */
 .lightbox-overlay {
   position: fixed;
