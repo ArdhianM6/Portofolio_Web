@@ -171,6 +171,8 @@
 
 .huawei-glow { background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.35), transparent 70%); }
 .dicoding-glow { background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.35), transparent 70%); }
+.etc-glow { background: radial-gradient(circle at 50% 0%, rgba(129, 140, 248, 0.35), transparent 70%); }
+.gunadarma-glow { background: radial-gradient(circle at 50% 0%, rgba(217, 70, 150, 0.35), transparent 70%); }
 
 /* --- THUMBNAIL PREVIEW --- */
 .cert-thumb {
@@ -232,6 +234,18 @@
   background: rgba(56, 189, 248, 0.15);
   color: #7DD3FC;
   border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.etc-badge {
+  background: rgba(129, 140, 248, 0.15);
+  color: #A5B4FC;
+  border: 1px solid rgba(129, 140, 248, 0.35);
+}
+
+.gunadarma-badge {
+  background: rgba(217, 70, 150, 0.15);
+  color: #F0ABFC;
+  border: 1px solid rgba(217, 70, 150, 0.35);
 }
 
 /* --- TITLE --- */

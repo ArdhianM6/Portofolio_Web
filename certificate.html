@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0B1220">
     <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="description" content="Certificates earned by Ardhian Maulana Tanjung from Huawei ICT Academy and Dicoding.">
+    <meta name="description" content="Certificates earned by Ardhian Maulana Tanjung from Huawei ICT Academy, Dicoding, ETC English Tutorial Centre, and Universitas Gunadarma.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
@@ -20,7 +20,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Ardhian Maulana Tanjung">
     <meta property="og:title" content="Certificates | Ardhian Maulana Tanjung">
-    <meta property="og:description" content="Certificates earned by Ardhian Maulana Tanjung from Huawei ICT Academy and Dicoding.">
+    <meta property="og:description" content="Certificates earned by Ardhian Maulana Tanjung from Huawei ICT Academy, Dicoding, ETC English Tutorial Centre, and Universitas Gunadarma.">
     <meta property="og:url" content="https://ardhianm6.github.io/Portofolio_Web/certificate.html">
     <meta property="og:image" content="https://ardhianm6.github.io/Portofolio_Web/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -28,7 +28,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Certificates | Ardhian Maulana Tanjung">
-    <meta name="twitter:description" content="Certificates earned by Ardhian Maulana Tanjung from Huawei ICT Academy and Dicoding.">
+    <meta name="twitter:description" content="Certificates earned by Ardhian Maulana Tanjung from Huawei ICT Academy, Dicoding, ETC English Tutorial Centre, and Universitas Gunadarma.">
     <meta name="twitter:image" content="https://ardhianm6.github.io/Portofolio_Web/og-image.jpg">
 </head>
 <body>
@@ -52,9 +52,9 @@
     </div>
 
     <div class="cert-stats" data-animate>
-      <div class="stat-item"><span class="stat-number">8</span><span class="stat-label">Certificates</span></div>
+      <div class="stat-item"><span class="stat-number">10</span><span class="stat-label">Certificates</span></div>
       <div class="stat-divider"></div>
-      <div class="stat-item"><span class="stat-number">2</span><span class="stat-label">Issuers</span></div>
+      <div class="stat-item"><span class="stat-number">4</span><span class="stat-label">Issuers</span></div>
       <div class="stat-divider"></div>
       <div class="stat-item"><span class="stat-number">2026</span><span class="stat-label">Latest year</span></div>
     </div>
@@ -63,9 +63,45 @@
       <button class="tab-btn active" data-filter="all"><i class="fa-solid fa-layer-group"></i> All</button>
       <button class="tab-btn" data-filter="huawei"><i class="fa-solid fa-network-wired"></i> Huawei ICT</button>
       <button class="tab-btn" data-filter="dicoding"><i class="fa-solid fa-code"></i> Dicoding</button>
+      <button class="tab-btn" data-filter="etc"><i class="fa-solid fa-language"></i> ETC</button>
+      <button class="tab-btn" data-filter="gunadarma"><i class="fa-solid fa-graduation-cap"></i> Gunadarma</button>
     </div>
 
     <div class="cert-grid" id="certGrid">
+      <div class="cert-card" data-category="etc" data-animate>
+        <div class="cert-card-inner">
+          <a class="cert-thumb" href="img/sertifikat/cert-toefl.pdf" target="_blank" rel="noopener" aria-label="Open TOEFL Prediction certificate PDF">
+            <img src="img/sertifikat/cert-toefl.webp" alt="TOEFL Prediction certificate from ETC English Tutorial Centre, total score 513" loading="lazy">
+            <div class="cert-thumb-overlay"><i class="fa-solid fa-file-pdf"></i></div>
+          </a>
+          <div class="cert-badge etc-badge"><i class="fa-solid fa-language"></i> ETC English Tutorial Centre</div>
+          <h3>TOEFL Prediction</h3>
+          <div class="cert-meta">
+            <span><i class="fa-regular fa-calendar"></i> 8 October 2026</span>
+            <span><i class="fa-solid fa-star"></i> Total score: 513</span>
+          </div>
+          <div class="cert-valid"><i class="fa-solid fa-shield-check"></i> Valid until 7 May 2027</div>
+          <a class="cert-view-btn" href="img/sertifikat/cert-toefl.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> View PDF certificate</a>
+        </div>
+        <div class="cert-glow etc-glow"></div>
+      </div>
+
+      <div class="cert-card" data-category="gunadarma" data-animate>
+        <div class="cert-card-inner">
+          <a class="cert-thumb" href="img/sertifikat/cert-golang-gunadarma.pdf" target="_blank" rel="noopener" aria-label="Open Golang certificate from Universitas Gunadarma">
+            <img src="img/sertifikat/cert-golang-gunadarma.webp" alt="Golang certificate from Universitas Gunadarma" loading="lazy">
+            <div class="cert-thumb-overlay"><i class="fa-solid fa-file-pdf"></i></div>
+          </a>
+          <div class="cert-badge gunadarma-badge"><i class="fa-solid fa-graduation-cap"></i> Universitas Gunadarma</div>
+          <h3>Golang Programming</h3>
+          <div class="cert-meta">
+            <span><i class="fa-regular fa-calendar"></i> 20 February 2025</span>
+          </div>
+          <a class="cert-view-btn" href="img/sertifikat/cert-golang-gunadarma.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> View PDF certificate</a>
+        </div>
+        <div class="cert-glow gunadarma-glow"></div>
+      </div>
+
       <div class="cert-card" data-category="huawei" data-animate>
         <div class="cert-card-inner">
           <div class="cert-thumb" onclick="openLightbox('img/sertifikat/cert-ai-fundamentals.webp', 'Artificial Intelligence Fundamentals — Huawei ICT Academy')">
