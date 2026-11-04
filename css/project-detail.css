@@ -518,3 +518,20 @@ nav a.active {
     height: 180px;
   }
 }
+
+
+/* Mobile detail-page spacing and focus refinements */
+.project-detail { width: min(calc(100% - 32px), 1000px); box-sizing: border-box; }
+.project-detail img { max-width: 100%; }
+.project-links .btn:focus-visible { outline: 2px solid #bfdbfe; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .project-detail { width: calc(100% - 20px); margin: 28px auto; padding: 28px 14px; border-radius: 12px; }
+  .project-detail h1 { font-size: clamp(1.55rem, 8vw, 2rem); overflow-wrap: anywhere; }
+  .description { margin-bottom: 26px; font-size: .94rem; }
+  .detail-tags { gap: 7px; }
+  .detail-tag { font-size: .72rem; padding: 5px 10px; }
+  .project-links { gap: 10px; }
+  .project-links .btn { width: min(100%, 340px); text-align: center; }
+  .detail-section { margin-bottom: 30px; }
+  .feature-grid { grid-template-columns: minmax(0, 1fr); }
+}

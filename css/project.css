@@ -529,3 +529,26 @@ nav a.active {
 }
 .proj-eyebrow { text-transform: none; letter-spacing: 0.5px; }
 .page-title { text-transform: none; }
+
+
+/* ALOVERA portfolio cards and mobile refinements */
+.proj-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.project-card { min-width: 0; }
+.project-card-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); gap: 10px; margin-top: auto; }
+.project-card-actions .btn { width: 100%; min-width: 0; padding-inline: 12px; }
+@media (max-width: 600px) {
+  .project-section { padding-inline: 4%; }
+  .proj-grid { gap: 18px; }
+  .proj-stats { width: 100%; max-width: 100%; flex-direction: row; gap: 8px; padding: 16px 10px; }
+  .proj-stat { flex: 1 1 0; min-width: 0; }
+  .proj-stat-num { font-size: clamp(1.35rem, 6vw, 1.8rem); }
+  .proj-stat-lbl { font-size: .58rem; letter-spacing: .04em; }
+  .proj-stat-divider { width: 1px; height: 34px; }
+  .project-card:hover { transform: translateY(-3px); }
+  .project-card-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-card-actions .btn { padding: 10px 8px; font-size: .9rem; }
+}
+@media (max-width: 360px) {
+  .project-card-actions { grid-template-columns: 1fr; }
+  .project-card-actions .btn { width: 100%; }
+}
