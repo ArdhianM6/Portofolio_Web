@@ -42,9 +42,9 @@
         .featured-head h2 { font-size: 2.4rem; margin: 14px 0 8px; }
         .featured-head p { color: #cbd5e1; max-width: 560px; margin: 0 auto; }
         .feat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 36px; text-align: left; }
-        .feat-card { display: flex; min-width: 0; flex-direction: column; background: #101A2E; border: 1px solid rgba(59,130,246,.25); border-radius: 10px; overflow: hidden; color: #fff; transition: opacity .6s ease, transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+        .feat-card { position: relative; display: flex; min-width: 0; flex-direction: column; background: #101A2E; border: 1px solid rgba(59,130,246,.25); border-radius: 10px; overflow: hidden; color: #fff; transition: opacity .6s ease, transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
         .feat-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37,99,235,.2); border-color: rgba(96,165,250,.7); }
-        .feat-card:focus-within { border-color: #60A5FA; }
+        .feat-card:focus-within { border-color: #60A5FA; }.feat-card-link{position:absolute;inset:0;z-index:1;border-radius:inherit}.feat-card-link:focus-visible{outline:3px solid #60A5FA;outline-offset:3px}.feat-actions{position:relative;z-index:2}
         .feat-thumb { height: 230px; overflow: hidden; background: #0B1220; border-bottom: 1px solid rgba(59,130,246,.2); }
         .feat-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
         .feat-card:hover .feat-thumb img { transform: scale(1.05); }
@@ -322,6 +322,18 @@
         const els = document.querySelectorAll('[data-animate]');
         const reveal = () => els.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight - 60) el.classList.add('visible'); });
         window.addEventListener('scroll', reveal); window.addEventListener('load', reveal); reveal();
+
+        // Make each featured card open its own case study; keep its explicit action links working.
+        document.querySelectorAll('.feat-card').forEach(card => {
+            const detailLink = card.querySelector('.feat-actions a[href^="project-detail/"]');
+            if (!detailLink) return;
+            const title = card.querySelector('h3')?.textContent.trim() || 'project';
+            const cardLink = document.createElement('a');
+            cardLink.className = 'feat-card-link';
+            cardLink.href = detailLink.href;
+            cardLink.setAttribute('aria-label', `Open ${title} project details`);
+            card.prepend(cardLink);
+        });
 
         // ---- Hire Me modal ----
         const hireBtn = document.querySelector('.hire-btn');
