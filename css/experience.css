@@ -421,6 +421,10 @@ nav a.active {
   align-items: start;
 }
 
+.experience-gallery--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .timeline { display: flex; flex-direction: column; }
 
 .experience-photo {
