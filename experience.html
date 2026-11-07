@@ -70,6 +70,26 @@
                         <li>Designed the login menu for the website</li>
                     </ul>
                     <p class="timeline-tech"><strong>Technologies:</strong> PHP</p>
+                    <div class="experience-gallery" aria-label="Photo evidence from the internship at BPSDM West Sumatra">
+                        <figure class="experience-photo">
+                            <button class="experience-photo-button" type="button" data-full-image="img/bpsdm-meeting.jpeg" data-caption="With the Head of Personnel Affairs at BPSDM West Sumatra" aria-label="View the full photo with the Head of Personnel Affairs at BPSDM West Sumatra">
+                                <img src="img/bpsdm-meeting.jpeg" alt="With the Head of Personnel Affairs at BPSDM West Sumatra" loading="lazy" decoding="async">
+                            </button>
+                            <figcaption>With the Head of Personnel Affairs</figcaption>
+                        </figure>
+                        <figure class="experience-photo">
+                            <button class="experience-photo-button" type="button" data-full-image="img/bpsdm-office-work.jpeg" data-caption="Working on office documents" aria-label="View the full photo while working on office documents">
+                                <img src="img/bpsdm-office-work.jpeg" alt="Working on documents during the BPSDM internship" loading="lazy" decoding="async">
+                            </button>
+                            <figcaption>Working on office documents</figcaption>
+                        </figure>
+                        <figure class="experience-photo">
+                            <button class="experience-photo-button" type="button" data-full-image="img/bpsdm-computer-work.jpeg" data-caption="Working on an office project at BPSDM West Sumatra" aria-label="View the full photo while working on an office project">
+                                <img src="img/bpsdm-computer-work.jpeg" alt="Working on an office project during the BPSDM West Sumatra internship" loading="lazy" decoding="async">
+                            </button>
+                            <figcaption>Working on an office project</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </div>
 
@@ -103,6 +123,36 @@
             </div>
 
             <div class="timeline-item" data-animate>
+                <div class="timeline-icon"><i class="fa-solid fa-earth-asia"></i></div>
+                <div class="timeline-content">
+                    <span class="timeline-tag">2024 | 1 semester (about 4 months)</span>
+                    <h3>Participant, Merdeka Student Exchange (PMM)</h3>
+                    <p class="timeline-meta">Universitas Gunadarma</p>
+                    <p>Joined the Merdeka Student Exchange program for one semester (approximately four months).</p>
+                    <div class="experience-gallery" aria-label="Merdeka Student Exchange photos at Gunadarma University">
+                        <figure class="experience-photo">
+                            <button class="experience-photo-button" type="button" data-full-image="img/pmm-classmates.jpeg" data-caption="With senior leaders of Gunadarma University" aria-label="View the full photo with senior leaders of Gunadarma University">
+                                <img src="img/pmm-classmates.jpeg" alt="With senior leaders of Gunadarma University" loading="lazy" decoding="async">
+                            </button>
+                            <figcaption>With senior leaders of Gunadarma University</figcaption>
+                        </figure>
+                        <figure class="experience-photo">
+                            <button class="experience-photo-button" type="button" data-full-image="img/pmm-class.jpeg" data-caption="With Gunadarma students in class 3IA01" aria-label="View the full photo with Gunadarma students in class 3IA01">
+                                <img src="img/pmm-class.jpeg" alt="With Gunadarma students in class 3IA01" loading="lazy" decoding="async">
+                            </button>
+                            <figcaption>With Gunadarma students in class 3IA01</figcaption>
+                        </figure>
+                        <figure class="experience-photo">
+                            <button class="experience-photo-button" type="button" data-full-image="img/pmm-campus-visit.jpg" data-caption="With the program's faculty advisor and study program head" aria-label="View the full photo with the program's faculty advisor and study program head">
+                                <img src="img/pmm-campus-visit.jpg" alt="With the program's faculty advisor and study program head" loading="lazy" decoding="async">
+                            </button>
+                            <figcaption>With the program's faculty advisor and study program head</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-animate>
                 <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                 <div class="timeline-content">
                     <span class="timeline-tag">2022 – Aug 2026</span>
@@ -110,12 +160,16 @@
                     <p class="timeline-meta">Universitas Putra Indonesia &ldquo;YPTK&rdquo; Padang</p>
                     <ul>
                         <li>Graduated 20 August 2026 with a GPA of 3.56 (Cum Laude)</li>
-                        <li>Student Exchange Program at Gunadarma University (2024)</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+    <dialog class="experience-lightbox" aria-label="Foto pengalaman">
+        <button class="lightbox-close" type="button" aria-label="Tutup foto"><i class="fa-solid fa-xmark"></i></button>
+        <img class="lightbox-image" src="" alt="">
+        <p class="lightbox-caption"></p>
+    </dialog>
     <footer data-animate>
         <div class="footer-container">
             <p class="footer-title">Get in touch</p>
@@ -136,6 +190,26 @@
         const scrollTopBtn = document.getElementById('scrollTopBtn');
         window.addEventListener('scroll', () => scrollTopBtn.classList.toggle('show', window.scrollY > 300));
         scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+    <script>
+        const photoDialog = document.querySelector('.experience-lightbox');
+        const fullImage = photoDialog.querySelector('.lightbox-image');
+        const photoCaption = photoDialog.querySelector('.lightbox-caption');
+
+        document.querySelectorAll('.experience-photo-button').forEach((button) => {
+            button.addEventListener('click', () => {
+                fullImage.src = button.dataset.fullImage;
+                fullImage.alt = button.querySelector('img').alt;
+                photoCaption.textContent = button.dataset.caption;
+                photoDialog.showModal();
+            });
+        });
+
+        photoDialog.querySelector('.lightbox-close').addEventListener('click', () => photoDialog.close());
+        photoDialog.addEventListener('click', (event) => {
+            if (event.target === photoDialog) photoDialog.close();
+        });
+        photoDialog.addEventListener('close', () => { fullImage.src = ''; });
     </script>
     <script>
         const menuIcon = document.getElementById('menu-icon');
