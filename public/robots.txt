@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ardhianm6.github.io/Portofolio_Web/sitemap.xml

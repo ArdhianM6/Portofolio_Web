@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ardhianm6.github.io/Portofolio_Web/</loc></url>
-  <url><loc>https://ardhianm6.github.io/Portofolio_Web/about.html</loc></url>
-  <url><loc>https://ardhianm6.github.io/Portofolio_Web/skills.html</loc></url>
-  <url><loc>https://ardhianm6.github.io/Portofolio_Web/project.html</loc></url>
-  <url><loc>https://ardhianm6.github.io/Portofolio_Web/experience.html</loc></url>
-  <url><loc>https://ardhianm6.github.io/Portofolio_Web/certificate.html</loc></url>
-  <url><loc>https://ardhianm6.github.io/Portofolio_Web/project-detail/project1.html</loc></url>
-  <url><loc>https://ardhianm6.github.io/Portofolio_Web/project-detail/project2.html</loc></url>
-  <url><loc>https://ardhianm6.github.io/Portofolio_Web/project-detail/project3.html</loc></url>
-  <url><loc>https://ardhianm6.github.io/Portofolio_Web/project-detail/project4.html</loc></url>
-  <url><loc>https://ardhianm6.github.io/Portofolio_Web/project-detail/project5.html</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/about</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/skills</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/projects</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/experience</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/certificates</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/projects/screen-search</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/projects/expense-tracker</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/projects/marketplace</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/projects/ruang-saji</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/projects/alovera</loc></url>
+  <url><loc>https://ardhianm6.github.io/Portofolio_Web/projects/alovera-pos</loc></url>
 </urlset>
